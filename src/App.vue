@@ -3,7 +3,7 @@
     <SiteHeader />
     <main>Site Main Here</main>
     <footer>
-      <div class="footer-top">
+      <div class="footer-top py-3">
         <div class="container">
           <div class="row">
             <div class="col-3">LEFT</div>
@@ -32,6 +32,7 @@ footer {
   background-color: $darkestColor;
   .footer-top {
     color: $lightestColor;
+    text-align: center;
   }
 }
 </style>
