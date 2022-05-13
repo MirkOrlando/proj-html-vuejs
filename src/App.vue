@@ -1,5 +1,9 @@
 <template>
-  <div id="app"></div>
+  <div id="app">
+    <header>Site Header Here</header>
+    <main>Site Main Here</main>
+    <footer>Site Footer Here</footer>
+  </div>
 </template>
 
 <script>
