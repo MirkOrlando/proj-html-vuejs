@@ -7,38 +7,45 @@
         <div class="container">
           <div class="row">
             <div class="col-3">
-              <div class="logo">
-                <img src="@/assets/img/logo-200x34.png" alt="logo" />
-              </div>
-              <p class="py-2">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
-                sunt iure similique suscipit quasi. Et, recusandae.
-                Voluptatibus, perferendis ab aperiam.
-              </p>
               <div class="social">
-                <font-awesome-icon
-                  class="icon"
-                  icon="fa-brands fa-facebook-f"
-                />
-                <font-awesome-icon class="icon" icon="fa-brands fa-twitter" />
-                <font-awesome-icon class="icon" icon="fa-brands fa-youtube" />
-                <font-awesome-icon class="icon" icon="fa-brands fa-instagram" />
-                <font-awesome-icon
-                  class="icon"
-                  icon="fa-brands fa-linkedin-in"
-                />
+                <div class="logo">
+                  <img src="@/assets/img/logo-200x34.png" alt="logo" />
+                </div>
+                <p class="py-2">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Minima sunt iure similique suscipit quasi. Et, recusandae.
+                  Voluptatibus, perferendis ab aperiam.
+                </p>
+                <div class="social-action">
+                  <font-awesome-icon
+                    class="icon"
+                    icon="fa-brands fa-facebook-f"
+                  />
+                  <font-awesome-icon class="icon" icon="fa-brands fa-twitter" />
+                  <font-awesome-icon class="icon" icon="fa-brands fa-youtube" />
+                  <font-awesome-icon
+                    class="icon"
+                    icon="fa-brands fa-instagram"
+                  />
+                  <font-awesome-icon
+                    class="icon"
+                    icon="fa-brands fa-linkedin-in"
+                  />
+                </div>
               </div>
             </div>
             <div class="col-3">
-              <h3>Recent Posts</h3>
-              <ul>
-                <li v-for="(recentPost, index) in recentPosts" :key="index">
-                  <a href="#">
-                    <font-awesome-icon icon="fa-solid fa-chevron-right" />
-                    {{ recentPost }}
-                  </a>
-                </li>
-              </ul>
+              <div class="recent-posts">
+                <h3>Recent Posts</h3>
+                <ul>
+                  <li v-for="(recentPost, index) in recentPosts" :key="index">
+                    <a href="#">
+                      <font-awesome-icon icon="fa-solid fa-chevron-right" />
+                      {{ recentPost }}
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div class="col-3">RIGHT</div>
           </div>
@@ -77,10 +84,15 @@ footer {
     color: $jumbo;
     text-align: center;
     .social {
-      color: $socialIconColor /* ff414b */;
-      .icon {
-        margin: 0 0.25rem;
-        padding: 0 0.25rem;
+      p {
+        line-height: 1.5rem;
+      }
+      .social-action {
+        color: $socialIconColor /* ff414b */;
+        .icon {
+          margin: 0 0.25rem;
+          padding: 0 0.25rem;
+        }
       }
     }
   }
