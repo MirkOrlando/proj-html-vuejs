@@ -2,7 +2,17 @@
   <div id="app">
     <SiteHeader />
     <main>Site Main Here</main>
-    <footer>Site Footer Here</footer>
+    <footer>
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-3">LEFT</div>
+            <div class="col-3">CENTER</div>
+            <div class="col-3">RIGHT</div>
+          </div>
+        </div>
+      </div>
+    </footer>
   </div>
 </template>
 
@@ -18,4 +28,10 @@ export default {
 
 <style lang="scss">
 @import "@/assets/scss/style.scss";
+footer {
+  background-color: $darkestColor;
+  .footer-top {
+    color: $lightestColor;
+  }
+}
 </style>
