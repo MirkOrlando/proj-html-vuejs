@@ -29,7 +29,17 @@
                 />
               </div>
             </div>
-            <div class="col-3">CENTER</div>
+            <div class="col-3">
+              <h3>Recent Posts</h3>
+              <ul>
+                <li v-for="(recentPost, index) in recentPosts" :key="index">
+                  <a href="#">
+                    <font-awesome-icon icon="fa-solid fa-chevron-right" />
+                    {{ recentPost }}
+                  </a>
+                </li>
+              </ul>
+            </div>
             <div class="col-3">RIGHT</div>
           </div>
         </div>
@@ -44,6 +54,17 @@ export default {
   name: "App",
   components: {
     SiteHeader,
+  },
+  data() {
+    return {
+      recentPosts: [
+        "The best protein shake",
+        "Ultimate cardio workout",
+        "New juices available now",
+        "Tips to find training parteners",
+        "20 best healthy recipes",
+      ],
+    };
   },
 };
 </script>
