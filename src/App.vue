@@ -7,7 +7,11 @@
             <img src="@/assets/img/logo.png" alt="logo" />
           </div>
           <div class="nav-menu">
-            <div class="menu-items">MENU-ITMES</div>
+            <ul class="nav-items">
+              <li v-for="(navItem, index) in navItems" :key="index">
+                <a href="#">{{ navItem }}</a>
+              </li>
+            </ul>
             <div class="nav-actions">
               <a href="#" class="btn btn-primary">Schedule a Workout</a>
               <font-awesome-icon
@@ -29,6 +33,11 @@
 export default {
   name: "App",
   components: {},
+  data() {
+    return {
+      navItems: ["Home", "Services", "About", "Videos", "Blog", "Store"],
+    };
+  },
 };
 </script>
 
@@ -46,6 +55,13 @@ header {
     .nav-menu {
       display: flex;
       gap: 2rem;
+      width: fit-content;
+      .nav-items {
+        display: flex;
+        li {
+          padding: 0 2rem;
+        }
+      }
     }
   }
 }
