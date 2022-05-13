@@ -36,7 +36,7 @@
             </div>
             <div class="col-3">
               <div class="recent-posts">
-                <h3>Recent Posts</h3>
+                <h4>Recent Posts</h4>
                 <ul>
                   <li v-for="(recentPost, index) in recentPosts" :key="index">
                     <a href="#">
@@ -93,6 +93,17 @@ footer {
           margin: 0 0.25rem;
           padding: 0 0.25rem;
         }
+      }
+    }
+    h4 {
+      text-transform: uppercase;
+      line-height: 40px;
+    }
+    .recent-posts {
+      color: $lightestColor;
+      li {
+        margin: 0.5rem 0;
+        padding: 0.5rem 0;
       }
     }
   }
