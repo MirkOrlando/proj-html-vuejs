@@ -8,7 +8,11 @@
           </div>
           <div class="nav-menu">
             <ul class="nav-items">
-              <li v-for="(navItem, index) in navItems" :key="index">
+              <li
+                v-for="(navItem, index) in navItems"
+                :key="index"
+                :class="navItem === 'Store' ? 'new' : ''"
+              >
                 <a href="#">{{ navItem }}</a>
               </li>
             </ul>
@@ -59,7 +63,16 @@ header {
       .nav-items {
         display: flex;
         li {
+          display: flex;
           padding: 0 2rem;
+          &.new a:after {
+            content: "new";
+            font-size: 0.75rem;
+            color: $darkestColor;
+            margin-left: 0.5rem;
+            padding: 0.5rem;
+            background-color: $new;
+          }
         }
       }
     }
