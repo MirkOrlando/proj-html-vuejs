@@ -29,6 +29,7 @@ export default {
 header {
   background-color: $darkestColor;
   color: $jumbo;
+  padding: 1rem 0;
 }
 /* #endregion header */
 </style>
