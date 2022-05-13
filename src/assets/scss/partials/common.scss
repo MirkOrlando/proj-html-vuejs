@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+.btn {
+    @include button
+}
+
+.btn-primary {
+    background-color: $primaryColor;
+}
+
+.btn-primary:hover {
+    background-color: #FF414B;
+}
+
+#app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+}

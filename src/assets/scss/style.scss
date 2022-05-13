@@ -1,11 +1,3 @@
 @import '@/assets/scss/variables.scss';
+@import '@/assets/scss/partials/common.scss';
 @import '@/assets/scss/partials/grid_structure.scss';
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-#app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-}
