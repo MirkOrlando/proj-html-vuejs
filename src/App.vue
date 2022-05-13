@@ -8,8 +8,13 @@
           </div>
           <div class="nav-menu">
             <div class="menu-items">MENU-ITMES</div>
-            <div class="actions">
+            <div class="nav-actions">
               <a href="#" class="btn btn-primary">Schedule a Workout</a>
+              <font-awesome-icon
+                icon="fa-solid fa-cart-shopping"
+                class="mx-2"
+              />
+              <font-awesome-icon icon="fa-solid fa-magnifying-glass" />
             </div>
           </div>
         </nav>
@@ -33,13 +38,11 @@ export default {
 header {
   background-color: $darkestColor;
   color: $jumbo;
-  font-size: 0.75rem;
   padding: 2rem 0;
   nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     .nav-menu {
       display: flex;
       gap: 2rem;
