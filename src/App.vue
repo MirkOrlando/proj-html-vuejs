@@ -4,7 +4,7 @@
       <div class="container">
         <nav>
           <div class="logo">LOGO</div>
-          <div class="menu">
+          <div class="nav-menu">
             <div class="menu-items">MENU-ITMES</div>
             <div class="actions">ACTIONS</div>
           </div>
@@ -29,7 +29,17 @@ export default {
 header {
   background-color: $darkestColor;
   color: $jumbo;
-  padding: 1rem 0;
+  padding: 2rem 0;
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .nav-menu {
+      display: flex;
+      gap: 2rem;
+    }
+  }
 }
 /* #endregion header */
 </style>
