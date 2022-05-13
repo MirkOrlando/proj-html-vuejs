@@ -11,18 +11,23 @@
               <li
                 v-for="(navItem, index) in navItems"
                 :key="index"
-                :class="navItem === 'Store' ? 'new' : ''"
+                :class="getNavItemClass(index)"
+                @click="getActiveNavItem(index)"
               >
                 <a href="#">{{ navItem }}</a>
               </li>
             </ul>
             <div class="nav-actions">
               <a href="#" class="btn btn-primary">Schedule a Workout</a>
-              <font-awesome-icon
-                icon="fa-solid fa-cart-shopping"
-                class="mx-2"
-              />
-              <font-awesome-icon icon="fa-solid fa-magnifying-glass" />
+              <a href="#">
+                <font-awesome-icon
+                  icon="fa-solid fa-cart-shopping"
+                  class="mx-2"
+                />
+              </a>
+              <a href="#">
+                <font-awesome-icon icon="fa-solid fa-magnifying-glass" />
+              </a>
             </div>
           </div>
         </nav>
@@ -40,7 +45,24 @@ export default {
   data() {
     return {
       navItems: ["Home", "Services", "About", "Videos", "Blog", "Store"],
+      activeNavItem: 0,
     };
+  },
+  methods: {
+    getActiveNavItem(i) {
+      this.activeNavItem = i;
+    },
+    getNavItemClass(i) {
+      if (this.navItems[i] === "Store" && this.activeNavItem === i) {
+        return "active new";
+      } else if (this.navItems[i] === "Store") {
+        return "new";
+      } else if (this.activeNavItem === i) {
+        return "active";
+      } else {
+        return "";
+      }
+    },
   },
 };
 </script>
@@ -72,6 +94,9 @@ header {
             margin-left: 0.5rem;
             padding: 0.5rem;
             background-color: $new;
+          }
+          &.active {
+            color: $lightestColor;
           }
         }
       }
