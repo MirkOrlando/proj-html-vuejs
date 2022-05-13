@@ -1,9 +1,12 @@
 $lightestColor: #FFFFFF;
 $darkestColor: #060606;
+$headerColor:#98939f;
+$footerPalelightColor:#cccbce;
+$footerLightDarkColor: #606070;
 $jumbo: #78787a;
 $primaryColor: #4154fe;
 $new: #fff941;
-$socialIconColor: #ec5a57;
+$alertColor: #FF414B;
 @mixin button {
     color: $lightestColor;
     padding: 1rem 2rem;

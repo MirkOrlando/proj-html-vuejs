@@ -65,7 +65,7 @@ export default {
 <style lang="scss" scoped>
 header {
   background-color: $darkestColor;
-  color: $jumbo;
+  color: $headerColor;
   padding: 2rem 0;
   nav {
     display: flex;
