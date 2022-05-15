@@ -6,26 +6,31 @@
         <div class="container">
           <div class="row py-4">
             <div class="col-8">
-              <h5>Certified fitness professional</h5>
-              <h1>Take control of your health</h1>
-              <div class="separator">
-                <font-awesome-icon icon="fa-solid fa-chevron-up" />
-                <font-awesome-icon icon="fa-solid fa-chevron-up" />
-                <font-awesome-icon icon="fa-solid fa-chevron-up" />
-              </div>
-              <p class="text">
-                Curabitur non nulla sit amet nisl tempus convallis quis ac
-                lectus dolor sit amet.
-              </p>
-              <div class="btn-actions">
-                <a href="#" class="btn btn-primary">
-                  <font-awesome-icon class="icon" icon="fa-brands fa-youtube" />
-                  Visit my YouTube channel
-                </a>
-                <a href="#" class="btn btn-outline"
-                  >Buy Avada today
-                  <font-awesome-icon icon="fa-solid fa-arrow-right" />
-                </a>
+              <div class="take-control">
+                <h5>Certified fitness professional</h5>
+                <h1>Take control of your health</h1>
+                <div class="separator">
+                  <font-awesome-icon icon="fa-solid fa-chevron-up" />
+                  <font-awesome-icon icon="fa-solid fa-chevron-up" />
+                  <font-awesome-icon icon="fa-solid fa-chevron-up" />
+                </div>
+                <p class="text">
+                  Curabitur non nulla sit amet nisl tempus convallis quis ac
+                  lectus dolor sit amet.
+                </p>
+                <div class="btn-actions">
+                  <a href="#" class="btn btn-primary">
+                    <font-awesome-icon
+                      class="icon"
+                      icon="fa-brands fa-youtube"
+                    />
+                    Visit my YouTube channel
+                  </a>
+                  <a href="#" class="btn btn-outline"
+                    >Buy Avada today
+                    <font-awesome-icon icon="fa-solid fa-arrow-right" />
+                  </a>
+                </div>
               </div>
             </div>
             <div class="col-4 d-flex justify-content-center align-item-center">
@@ -33,16 +38,25 @@
             </div>
           </div>
           <div class="offers">
-            <div class="row">
+            <div class="row g-2">
               <div class="col-4" v-for="(offer, index) in offers" :key="index">
-                <img :src="offer.src" :alt="offer.title" />
-                <h6 class="title">{{ offer.title }}</h6>
-                <p class="text">{{ offer.text }}</p>
+                <div class="card" :class="offer.class">
+                  <div class="offer-details">
+                    <div class="separator">
+                      <font-awesome-icon icon="fa-solid fa-chevron-up" />
+                      <font-awesome-icon icon="fa-solid fa-chevron-up" />
+                      <font-awesome-icon icon="fa-solid fa-chevron-up" />
+                    </div>
+                    <h3 class="title">{{ offer.title }}</h3>
+                    <p class="text">{{ offer.text }}</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+      <!-- /.jumbotron -->
     </main>
     <SiteFooter />
   </div>
@@ -64,19 +78,19 @@ export default {
     return {
       offers: [
         {
-          src: require("@/assets/img/service6-2x.jpg"),
           title: "Crossfit workout",
           text: "Push your limits",
+          class: "workout",
         },
         {
-          src: require("@/assets/img/box1-2x.jpg"),
           title: "New gym apparel",
           text: "Look good, feel good",
+          class: "apparel",
         },
         {
-          src: require("@/assets/img/box3-2x.jpg"),
           title: "Team training",
           text: "Find a partner",
+          class: "team",
         },
       ],
     };
@@ -92,29 +106,76 @@ export default {
   background-size: auto, cover;
   background-position: top right;
   background-repeat: no-repeat;
-  h5 {
-    color: #ff3b3e;
-    font-size: 1.25rem;
-    font-weight: 400;
+  .take-control {
+    h5 {
+      color: #ff3b3e;
+      font-size: 1.25rem;
+      font-weight: 400;
+    }
+    h1 {
+      color: $lightestColor;
+      font-size: 3.5rem;
+      font-weight: 400;
+      margin: 1rem 0;
+    }
+    .separator {
+      color: $new;
+      margin: 2rem 0;
+      font-size: 1.5rem;
+    }
+    .text {
+      color: $jumbo;
+      margin: 2rem 0;
+    }
+    .btn-actions {
+      padding: 1rem 0;
+      .btn:first-child {
+        margin-right: 1rem;
+      }
+    }
   }
-  h1 {
+  .card {
+    position: relative;
+    height: 100%;
+    min-height: 400px;
+    background-size: cover;
+    border-radius: 0.25rem;
+    border-bottom-right-radius: 2rem;
+    transition: all 250ms linear;
+    &:hover {
+      transform: scale(1.1);
+    }
+    &.workout {
+      background: linear-gradient(to top, #060606c7 5%, transparent 100%),
+        url("@/assets/img/service6-2x.jpg");
+      background-size: cover;
+    }
+    &.apparel {
+      background: linear-gradient(to top, #060606c7 5%, transparent 100%),
+        url("@/assets/img/box1-2x.jpg");
+      background-size: cover;
+    }
+    &.team {
+      background: linear-gradient(to top, #060606c7 5%, transparent 100%),
+        url("@/assets/img/box3-2x.jpg");
+      background-size: cover;
+    }
+  }
+  .offer-details {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
     color: $lightestColor;
-    font-size: 3.5rem;
-    font-weight: 400;
-    margin: 1rem 0;
-  }
-  .separator {
-    color: $new;
-    margin: 2rem 0;
-  }
-  .text {
-    color: $jumbo;
-    margin: 2rem 0;
-  }
-  .btn-actions {
-    padding: 1rem 0;
-    .btn:first-child {
-      margin-right: 1rem;
+    .separator {
+      margin: 1rem 0;
+      font-size: unset;
+    }
+    h3 {
+      font-size: 1.25rem;
+      margin: 0.5rem 0;
+    }
+    .text {
+      color: $new;
     }
   }
 }
