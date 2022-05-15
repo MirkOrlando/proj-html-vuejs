@@ -1,5 +1,5 @@
 .container {
-    max-width: 1400px;
+    max-width: 1200px;
     margin: auto;
     padding-right: 0.5rem;
     padding-left: 0.5rem;
@@ -7,6 +7,10 @@
 
 .row {
     display: flex;
+}
+
+.col {
+    flex: 1;
 }
 
 .col-3 {

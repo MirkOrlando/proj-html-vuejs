@@ -20,11 +20,22 @@ ul {
 
 .btn-primary {
     background-color: $primaryColor;
+    border-color: $primaryColor;
 }
 
 .btn-primary:hover {
     background-color: $alertColor;
-    ;
+    border-color: $alertColor;
+}
+
+.btn-outline {
+    border-color: #2C2A35;
+}
+
+.btn-outline:hover {
+    border-color: $lightestColor;
+    background-color: $lightestColor;
+    color: black;
 }
 
 #app {

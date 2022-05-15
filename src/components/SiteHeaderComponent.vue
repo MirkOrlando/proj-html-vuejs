@@ -70,7 +70,7 @@ header {
     justify-content: space-between;
     .nav-menu {
       display: flex;
-      gap: 2rem;
+      gap: 1rem;
       width: fit-content;
       & a:hover {
         color: $lightestColor;
@@ -79,7 +79,7 @@ header {
         display: flex;
         li {
           display: flex;
-          padding: 0 2rem;
+          padding: 0 1rem;
           &.new a:after {
             content: "new";
             font-size: 0.75rem;

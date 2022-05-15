@@ -11,6 +11,7 @@ $alertColor: #FF414B;
     color: $lightestColor;
     padding: 1rem 2rem;
     border-radius: 2rem;
+    border: 2px solid transparent;
     background-color: transparent;
     transition: all 250ms linear;
 }
