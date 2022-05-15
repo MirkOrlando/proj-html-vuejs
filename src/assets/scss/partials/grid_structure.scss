@@ -13,6 +13,10 @@
     flex: 1;
 }
 
-.col-3 {
+.col-4 {
     width: calc(100%/12*4);
+}
+
+.col-8 {
+    width: calc(100%/12*8);
 }

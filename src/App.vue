@@ -5,7 +5,7 @@
       <section class="jumbotron">
         <div class="container">
           <div class="row py-4">
-            <div class="col">
+            <div class="col-8">
               <h5>Certified fitness professional</h5>
               <h1>Take control of your health</h1>
               <div class="separator">
@@ -28,8 +28,12 @@
                 </a>
               </div>
             </div>
-            <div class="col">
-              <font-awesome-icon icon="fa-solid fa-play" />
+            <div class="col-4 d-flex justify-content-center align-item-center">
+              <div class="action">
+                <a href="#">
+                  <font-awesome-icon icon="fa-solid fa-play" />
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -55,7 +59,7 @@ export default {
 @import "@/assets/scss/style.scss";
 .jumbotron {
   background: linear-gradient(to right, #060606, #060606 45%, transparent 76%),
-    url(http://localhost:8080/img/slider82x-scaled.eb2b1d9f.jpg);
+    url(@/assets/img/slider82x-scaled.jpg);
   background-size: auto, cover;
   background-position: top right;
   background-repeat: no-repeat;
@@ -83,6 +87,13 @@ export default {
     .btn:first-child {
       margin-right: 1rem;
     }
+  }
+  .action .fa-play {
+    color: $primaryColor;
+    aspect-ratio: 1/1;
+    padding: 1.5rem;
+    background-color: $lightestColor;
+    border-radius: 50%;
   }
 }
 </style>
