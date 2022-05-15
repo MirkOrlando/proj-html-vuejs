@@ -18,11 +18,8 @@
           </ul>
           <div class="nav-actions">
             <a href="#" class="btn btn-primary">Schedule a Workout</a>
-            <a href="#">
-              <font-awesome-icon
-                icon="fa-solid fa-cart-shopping"
-                class="mx-2"
-              />
+            <a href="#" class="mx-2">
+              <font-awesome-icon icon="fa-solid fa-cart-shopping" />
             </a>
             <a href="#">
               <font-awesome-icon icon="fa-solid fa-magnifying-glass" />
@@ -75,6 +72,9 @@ header {
       display: flex;
       gap: 2rem;
       width: fit-content;
+      & a:hover {
+        color: $lightestColor;
+      }
       .nav-items {
         display: flex;
         li {
