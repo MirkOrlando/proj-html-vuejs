@@ -29,11 +29,7 @@
               </div>
             </div>
             <div class="col-4 d-flex justify-content-center align-item-center">
-              <div class="action">
-                <a href="#">
-                  <font-awesome-icon icon="fa-solid fa-play" />
-                </a>
-              </div>
+              <PlayButton />
             </div>
           </div>
         </div>
@@ -46,11 +42,14 @@
 <script>
 import SiteHeader from "@/components/SiteHeaderComponent.vue";
 import SiteFooter from "@/components/SiteFooterComponent.vue";
+/* to put in SiteMainComponent */
+import PlayButton from "@/components/PlayButtonComponent.vue";
 export default {
   name: "App",
   components: {
     SiteHeader,
     SiteFooter,
+    PlayButton,
   },
 };
 </script>
@@ -87,13 +86,6 @@ export default {
     .btn:first-child {
       margin-right: 1rem;
     }
-  }
-  .action .fa-play {
-    color: $primaryColor;
-    aspect-ratio: 1/1;
-    padding: 1.5rem;
-    background-color: $lightestColor;
-    border-radius: 50%;
   }
 }
 </style>
