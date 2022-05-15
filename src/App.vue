@@ -32,6 +32,15 @@
               <PlayButton />
             </div>
           </div>
+          <div class="offers">
+            <div class="row">
+              <div class="col-4" v-for="(offer, index) in offers" :key="index">
+                <img :src="offer.src" :alt="offer.title" />
+                <h6 class="title">{{ offer.title }}</h6>
+                <p class="text">{{ offer.text }}</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
@@ -50,6 +59,27 @@ export default {
     SiteHeader,
     SiteFooter,
     PlayButton,
+  },
+  data() {
+    return {
+      offers: [
+        {
+          src: require("@/assets/img/service6-2x.jpg"),
+          title: "Crossfit workout",
+          text: "Push your limits",
+        },
+        {
+          src: require("@/assets/img/box1-2x.jpg"),
+          title: "New gym apparel",
+          text: "Look good, feel good",
+        },
+        {
+          src: require("@/assets/img/box3-2x.jpg"),
+          title: "Team training",
+          text: "Find a partner",
+        },
+      ],
+    };
   },
 };
 </script>
