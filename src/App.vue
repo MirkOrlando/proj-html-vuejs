@@ -243,20 +243,26 @@
       <!-- /.jumbo-quote -->
       <div class="partners">
         <div class="container">
-          <div class="row g-2">
+          <div class="row">
             <div
               class="col-3"
               v-for="(partner, index) in partners"
               :key="index"
             >
-              <img :src="partner.src" alt="" />
-              <SeparatorSmPrimary />
-              <p>{{ partner.text }}</p>
-              <div class="action">
-                <a href="#">
-                  {{ partner.action }}
-                  <font-awesome-icon icon="fa-solid fa-chevron-right" />
-                </a>
+              <div class="card">
+                <div class="card-image">
+                  <img :src="partner.src" alt="" />
+                </div>
+                <SeparatorSmPrimary />
+                <div class="card-text">
+                  <p>{{ partner.text }}</p>
+                </div>
+                <div class="action">
+                  <a href="#">
+                    {{ partner.action }}
+                    <font-awesome-icon icon="fa-solid fa-chevron-right" />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -738,5 +744,20 @@ export default {
 }
 .partners {
   padding: 6rem 0;
+  .card {
+    text-align: center;
+    padding: 1rem;
+    .card-image {
+      margin-bottom: 1rem;
+    }
+    .card-text {
+      margin: 1rem 0;
+      color: $jumbo;
+      line-height: 1.5rem;
+    }
+    .action {
+      font-weight: bold;
+    }
+  }
 }
 </style>
