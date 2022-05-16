@@ -162,9 +162,12 @@
       <!-- /.mailing-list -->
       <section class="plans">
         <div class="container">
-          <div class="row g-2">
+          <div class="row g-3">
             <div class="col-4" v-for="(plan, index) in plans" :key="index">
               <div class="card">
+                <div class="card-icon">
+                  <font-awesome-icon :icon="plan.icon" />
+                </div>
                 <div class="card-title">
                   <h3 class="title">{{ plan.title }}</h3>
                   <h4 class="subtitle">{{ plan.subtitle }}</h4>
@@ -270,7 +273,11 @@
       </div>
       <!-- /.partners -->
       <section class="jumbo-workout">
-        <PlayButton />
+        <div class="playaction">
+          <a href="#">
+            <font-awesome-icon icon="fa-solid fa-play" />
+          </a>
+        </div>
         <h2>Crossfit workout of the day</h2>
         <div class="day">November 15th,2019</div>
         <div class="action">
@@ -341,18 +348,21 @@ export default {
       ],
       plans: [
         {
+          icon: "fa-regular fa-clock",
           title: "Team training",
           subtitle: "Find a partner",
           text: "Vestibulum, curabitur eu sem nibh ultrices sit nulla asipiscing. Nils sit fames amet senectus eget sed duis vehicula. Tristique.",
           action: "Find a partner",
         },
         {
+          icon: "fa-solid fa-dumbbell",
           title: "Crossfit workout",
           subtitle: "Push your limits",
           text: "Vestibulum, curabitur eu sem nibh ultrices sit nulla asipiscing. Nils sit fames amet senectus eget sed duis vehicula. Tristique.",
           action: "Learn about Crossfit",
         },
         {
+          icon: "fa-solid fa-bolt",
           title: "Weight loss plan",
           subtitle: "Shed those pounds",
           text: "At laoreet senectus volutpat diam vel sed sed amet pellentesque. Lobortis ut aliquam risus purus. A tellus ut etiam.",
@@ -648,13 +658,16 @@ export default {
   padding: 6rem 0;
   .card {
     height: 100%;
-    padding: 2.5rem 2.5rem;
+    padding: 4rem 3rem;
     border: 2px solid #3240c1;
     color: $lightestColor;
     text-align: center;
     transition: all 250ms linear;
     &:hover {
       transform: scale(1.05);
+    }
+    .card-icon {
+      font-size: 4rem;
     }
     .card-title {
       margin: 2rem 0;
@@ -769,6 +782,37 @@ export default {
     .action {
       font-weight: bold;
     }
+  }
+}
+.jumbo-workout {
+  color: $lightestColor;
+  background: linear-gradient(
+      160deg,
+      rgba(0, 0, 255, 0.4),
+      rgba(0, 0, 255, 0.4),
+      rgba(255, 0, 0, 0.4)
+    ),
+    url(http://localhost:8080/img/banner14-2x.d58b9b75.jpg);
+  filter: brightness(70%) saturate(80%) contrast(130%) opacity(95%);
+  background-size: cover;
+  text-align: center;
+  padding: 10rem 0;
+  .playaction .fa-play {
+    color: $primaryColor;
+    aspect-ratio: 1/1;
+    padding: 1.5rem;
+    background-color: $lightestColor;
+    border-radius: 50%;
+  }
+  h2 {
+    font-size: 2rem;
+    margin: 1rem 0;
+  }
+  .day {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+    color: $new;
   }
 }
 </style>
