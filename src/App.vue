@@ -140,7 +140,7 @@
       <!-- /.videos -->
       <section class="mailing-list">
         <div class="container">
-          <div class="row py-4">
+          <div class="row py-6">
             <div class="col-7">
               <div class="wrapper">
                 <h5>Join our mailing list today</h5>
@@ -163,19 +163,28 @@
       <!-- /.mailing-list -->
       <section class="plans">
         <div class="container">
-          <div class="row">
+          <div class="row g-2">
             <div class="col-4" v-for="(plan, index) in plans" :key="index">
-              <h4>{{ plan.title }}</h4>
-              <h3>{{ plan.subtitle }}</h3>
-              <p>{{ plan.text }}</p>
-              <div class="action">
-                {{ plan.action }}
-                <font-awesome-icon icon="fa-solid fa-chevron-right" />
+              <div class="card">
+                <div class="card-title">
+                  <h3 class="title">{{ plan.title }}</h3>
+                  <h4 class="subtitle">{{ plan.subtitle }}</h4>
+                </div>
+                <div class="card-body">
+                  <p>{{ plan.text }}</p>
+                </div>
+                <div class="card-action">
+                  <a href="#">
+                    {{ plan.action }}
+                    <font-awesome-icon icon="fa-solid fa-chevron-right" />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+      <!-- /.plans -->
     </main>
     <SiteFooter />
   </div>
@@ -490,6 +499,29 @@ export default {
   }
   .text {
     color: $jumbo;
+  }
+}
+.plans {
+  background-color: $darkestColor;
+  padding: 6rem 0;
+  .card {
+    height: 100%;
+    padding: 2.5rem 2.5rem;
+    border: 2px solid #3240c1;
+    color: $lightestColor;
+    text-align: center;
+    .card-title {
+      margin: 2rem 0;
+      .subtitle {
+        color: $new;
+        margin: 0.5rem 0;
+      }
+    }
+    .card-body {
+      color: $jumbo;
+      margin: 2rem 0;
+      line-height: 1.5rem;
+    }
   }
 }
 </style>
