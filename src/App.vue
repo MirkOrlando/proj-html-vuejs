@@ -68,6 +68,39 @@
           <span class="location">Los Angeles</span>
         </div>
       </div>
+      <!-- /.quote -->
+      <section class="videos">
+        <div class="row">
+          <div class="col-6"></div>
+          <div class="col-6">
+            <div class="wrapper">
+              <h4>Tune up your workouts</h4>
+              <h2>The best health & fitness advice online</h2>
+              <div class="youtube-channel">
+                <div class="pic">
+                  <img src="@/assets/img/yt_channel_pic.jpg" alt="" />
+                </div>
+                <div class="name">ThemeFusion</div>
+                <div class="badge">
+                  <div class="brand">
+                    <font-awesome-icon icon="fa-brands fa-youtube" /> YouTube
+                  </div>
+                  <div class="subscribers">999+</div>
+                </div>
+                <p class="text">
+                  Arcu eu facilisi ut quisque placerat nunc habitant. Magna
+                  semper maurid, venenatis, leo integer sit pellentesque.
+                </p>
+                <a href="#" class="btn btn-alert">
+                  <font-awesome-icon icon="fa-brands fa-youtube" /> Visit my
+                  YouTube channel
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /.videos -->
     </main>
     <SiteFooter />
   </div>

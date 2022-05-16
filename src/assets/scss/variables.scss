@@ -6,7 +6,8 @@ $footerLightDarkColor: #606070;
 $jumbo: #78787a;
 $primaryColor: #4154fe;
 $new: #fff941;
-$alertColor: #FF414B;
+$alertColor: #FF0000;
+$liteAlertColor: #FF414B;
 @mixin button {
     color: $lightestColor;
     padding: 1rem 2rem;

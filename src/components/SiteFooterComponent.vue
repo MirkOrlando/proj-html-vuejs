@@ -90,7 +90,7 @@ footer {
         color: $footerPalelightColor;
       }
       .social-action {
-        color: $alertColor;
+        color: $liteAlertColor;
         .icon {
           margin: 0 0.25rem;
           padding: 0 0.25rem;

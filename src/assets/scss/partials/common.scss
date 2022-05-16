@@ -27,11 +27,6 @@ img {
     border-color: $primaryColor;
 }
 
-.btn-primary:hover {
-    background-color: $alertColor;
-    border-color: $alertColor;
-}
-
 .btn-outline {
     border-color: #2C2A35;
 }
@@ -40,6 +35,17 @@ img {
     border-color: $lightestColor;
     background-color: $lightestColor;
     color: black;
+}
+
+.btn-alert {
+    background-color: $alertColor;
+    border-color: $alertColor;
+}
+
+.btn-primary:hover,
+.btn-alert:hover {
+    background-color: $liteAlertColor;
+    border-color: $liteAlertColor;
 }
 
 #app {
