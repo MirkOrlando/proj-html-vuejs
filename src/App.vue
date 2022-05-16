@@ -52,20 +52,22 @@
       </section>
       <!-- /.jumbotron -->
       <div class="quote">
-        <p class="text">
-          "How You respond to the challenge in the second half
-          <br />
-          will determine what you become after the game,
-          <br />
-          whether you are a winner or a loser."
-        </p>
-        <SeparatorLg />
-        <div class="user">
-          <div class="userpic">
-            <img src="@/assets/img/avatar-1-2x.jpg" alt="" />
+        <div class="wrapper">
+          <p class="text">
+            "How You respond to the challenge in the second half
+            <br />
+            will determine what you become after the game,
+            <br />
+            whether you are a winner or a loser."
+          </p>
+          <SeparatorLg />
+          <div class="user">
+            <div class="userpic">
+              <img src="@/assets/img/avatar-1-2x.jpg" alt="" />
+            </div>
+            <span class="username">Brad Johnson</span>
+            <span class="location">Los Angeles</span>
           </div>
-          <span class="username">Brad Johnson</span>
-          <span class="location">Los Angeles</span>
         </div>
       </div>
       <!-- /.quote -->
@@ -85,7 +87,7 @@
                 <div class="pic">
                   <img src="@/assets/img/yt_channel_pic.jpg" alt="" />
                 </div>
-                <div class="dettails">
+                <div class="details">
                   <div class="name">ThemeFusion</div>
                   <div class="badge">
                     <div class="brand">
@@ -233,9 +235,12 @@ export default {
   color: $lightestColor;
   background: linear-gradient(160deg, #0219eb, #d4000c);
   padding: 6rem 0;
+  .wrapper {
+    margin-top: 20rem;
+    margin-bottom: 3rem;
+  }
   .text {
     font-size: 2rem;
-    margin-top: 20rem;
   }
   .user {
     display: flex;
@@ -260,10 +265,13 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    min-height: 700px;
     background-image: url("@/assets/img/service15-2x.jpg");
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
+    margin-top: -3rem;
+    border-bottom-right-radius: 2rem;
   }
   .wrapper {
     padding: 6rem;
