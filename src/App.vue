@@ -141,7 +141,7 @@
       <section class="mailing-list">
         <div class="container">
           <div class="row py-4">
-            <div class="col-8">
+            <div class="col-7">
               <div class="wrapper">
                 <h5>Join our mailing list today</h5>
                 <h2>Insider offers & flash sales in your inbox every week.</h2>
@@ -152,7 +152,8 @@
                 </div>
                 <p class="text">
                   Curabitur non nulla sit amet nisl tempus convallis quis ac
-                  lectus dolor sit amet.
+                  lectus dolor sit amet, consectetur adipiscing elit sed
+                  portittor lectus.
                 </p>
               </div>
             </div>
@@ -420,6 +421,40 @@ export default {
         font-size: 0.75rem;
       }
     }
+  }
+}
+.mailing-list {
+  background: linear-gradient(to right, #060606, #060606 45%, transparent 76%),
+    url(@/assets/img/banner1-2x.jpg);
+  background-size: auto, cover;
+  background-position: top right;
+  background-repeat: no-repeat;
+  h5 {
+    color: #ff3b3e;
+    font-size: 1.25rem;
+  }
+  h2 {
+    color: $lightestColor;
+    font-size: 3rem;
+    font-weight: 400;
+    margin: 1rem 0;
+  }
+  .action {
+    margin: 2rem 0;
+    input {
+      width: calc(70% - 1rem);
+      padding: 1rem;
+      margin-right: 1rem;
+      border-radius: 2rem;
+    }
+    .btn {
+      display: inline-block;
+      text-align: center;
+      width: 30%;
+    }
+  }
+  .text {
+    color: $jumbo;
   }
 }
 </style>
