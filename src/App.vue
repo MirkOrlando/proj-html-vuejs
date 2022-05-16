@@ -72,7 +72,6 @@
       </div>
       <!-- /.quote -->
       <section class="videos">
-        <!-- add .container-lg -->
         <div class="row">
           <div class="col-6">
             <div class="video p-relative">
@@ -219,6 +218,28 @@
         </div>
       </div>
       <!-- /.latest-articles -->
+      <div class="jumbo-quote">
+        <div class="wrapper">
+          <p class="text-quote">
+            "I've failed over and over again in my
+            <br />
+            life. And that is why I succeed
+          </p>
+          <SeparatorLg />
+          <p class="text">
+            Arcu auctor gravida niisl, conque sit nisi tincidunt eget proin. In
+            lacinia lacus donec sed massa in ipsum eros, tristique. Gravida
+            suspendisse etiam in iaculis
+          </p>
+          <div class="action">
+            <a href="#" class="btn btn-primary"
+              >Buy Avada today
+              <font-awesome-icon icon="fa-solid fa-chevron-right"
+            /></a>
+          </div>
+        </div>
+      </div>
+      <!-- /.jumbo-quote -->
     </main>
     <SiteFooter />
   </div>
