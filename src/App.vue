@@ -120,7 +120,13 @@
                 <font-awesome-icon icon="fa-solid fa-chevron-right" />
               </p>
             </div>
-            <div class="row"></div>
+            <div class="row">
+              <div class="col-4" v-for="(video, index) in videos" :key="index">
+                <img :src="video.src" alt="" />
+                <h5>{{ video.title }}</h5>
+                <p>{{ video.text }}</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -165,21 +171,21 @@ export default {
           class: "team",
         },
       ],
-      featuredVideos: [
+      videos: [
         {
           title: "Thighs & glute workout",
           text: "Increase your mobility",
-          class: "mobility",
+          src: require("@/assets/img/video2-2x.jpg"),
         },
         {
           title: "Lift, firm & perk up",
           text: "Feel young again",
-          class: "mobility",
+          src: require("@/assets/img/video7-2x.jpg"),
         },
         {
-          title: "Thighs & glute workout",
-          text: "Increase your mobility",
-          class: "mobility",
+          title: "Slim & trim your waist",
+          text: "Shed thos extra pounds",
+          src: require("@/assets/img/video9-2x.jpg"),
         },
       ],
     };
