@@ -164,7 +164,15 @@
       <section class="plans">
         <div class="container">
           <div class="row">
-            <div class="col-4"></div>
+            <div class="col-4" v-for="(plan, index) in plans" :key="index">
+              <h4>{{ plan.title }}</h4>
+              <h3>{{ plan.subtitle }}</h3>
+              <p>{{ plan.text }}</p>
+              <div class="action">
+                {{ plan.action }}
+                <font-awesome-icon icon="fa-solid fa-chevron-right" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -223,6 +231,26 @@ export default {
           title: "Slim & trim your waist",
           text: "Shed thos extra pounds",
           src: require("@/assets/img/video9-2x.jpg"),
+        },
+      ],
+      plans: [
+        {
+          title: "Team training",
+          subtitle: "Find a partner",
+          text: "Vestibulum, curabitur eu sem nibh ultrices sit nulla asipiscing. Nils sit fames amet senectus eget sed duis vehicula. Tristique.",
+          action: "Find a partner",
+        },
+        {
+          title: "Crossfit workout",
+          subtitle: "Push your limits",
+          text: "Vestibulum, curabitur eu sem nibh ultrices sit nulla asipiscing. Nils sit fames amet senectus eget sed duis vehicula. Tristique.",
+          action: "Learn about Crossfit",
+        },
+        {
+          title: "Weight loss plan",
+          subtitle: "Shed those pounds",
+          text: "At laoreet senectus volutpat diam vel sed sed amet pellentesque. Lobortis ut aliquam risus purus. A tellus ut etiam.",
+          action: "Schedule a workout",
         },
       ],
     };
