@@ -161,6 +161,13 @@
         </div>
       </section>
       <!-- /.mailing-list -->
+      <section class="plans">
+        <div class="container">
+          <div class="row">
+            <div class="col-4"></div>
+          </div>
+        </div>
+      </section>
     </main>
     <SiteFooter />
   </div>
