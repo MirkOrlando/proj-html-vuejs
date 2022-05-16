@@ -243,7 +243,23 @@
       <!-- /.jumbo-quote -->
       <div class="partners">
         <div class="container">
-          <div class="row col-3"></div>
+          <div class="row g-2">
+            <div
+              class="col-3"
+              v-for="(partner, index) in partners"
+              :key="index"
+            >
+              <img :src="partner.src" alt="" />
+              <SeparatorSmPrimary />
+              <p>{{ partner.text }}</p>
+              <div class="action">
+                <a href="#">
+                  {{ partner.action }}
+                  <font-awesome-icon icon="fa-solid fa-chevron-right" />
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <!-- /.partners -->
@@ -259,6 +275,7 @@ import SiteFooter from "@/components/SiteFooterComponent.vue";
 import PlayButton from "@/components/PlayButtonComponent.vue";
 import SeparatorLg from "@/components/SeparatorLgComponent.vue";
 import SeparatorSm from "@/components/SeparatorSmComponent.vue";
+import SeparatorSmPrimary from "@/components/SeparatorSmPrimaryComponent.vue";
 export default {
   name: "App",
   components: {
@@ -267,6 +284,7 @@ export default {
     PlayButton,
     SeparatorLg,
     SeparatorSm,
+    SeparatorSmPrimary,
   },
   data() {
     return {
@@ -717,5 +735,8 @@ export default {
       margin-top: 3rem;
     }
   }
+}
+.partners {
+  padding: 6rem 0;
 }
 </style>
