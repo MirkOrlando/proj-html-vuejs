@@ -110,6 +110,18 @@
             </div>
           </div>
         </div>
+        <div class="featured-playlist">
+          <div class="container">
+            <div class="top">
+              <h4>Featured playlist</h4>
+              <p>
+                View all videos
+                <font-awesome-icon icon="fa-solid fa-chevron-right" />
+              </p>
+            </div>
+            <div class="row py-4"></div>
+          </div>
+        </div>
       </section>
       <!-- /.videos -->
     </main>
