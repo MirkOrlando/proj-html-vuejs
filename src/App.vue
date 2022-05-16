@@ -127,10 +127,10 @@
                     <img :src="video.src" alt="" />
                     <PlayButton />
                   </div>
-                </div>
-                <div class="card-details">
-                  <h5>{{ video.title }}</h5>
-                  <p class="card-text">{{ video.text }}</p>
+                  <div class="card-details">
+                    <h5>{{ video.title }}</h5>
+                    <p class="card-text">{{ video.text }}</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -190,8 +190,10 @@
           <div class="top">
             <h4>Latest articles</h4>
             <div class="all">
-              Read all articles
-              <font-awesome-icon icon="fa-solid fa-chevron-right" />
+              <a href="#">
+                Read all articles
+                <font-awesome-icon icon="fa-solid fa-chevron-right" />
+              </a>
             </div>
           </div>
           <div class="row g-2">
@@ -201,13 +203,13 @@
               :key="index"
             >
               <div class="card">
-                <div class="card-video p-relative">
+                <div class="card-image">
                   <img :src="article.src" alt="" />
                 </div>
-              </div>
-              <div class="card-details">
-                <h5>{{ article.title }}</h5>
-                <p class="card-text">{{ article.text }}</p>
+                <div class="card-details">
+                  <h5>{{ article.title }}</h5>
+                  <p class="card-text">{{ article.text }}</p>
+                </div>
               </div>
             </div>
           </div>
@@ -354,7 +356,7 @@ export default {
     margin-bottom: -20rem;
     transition: all 250ms linear;
     &:hover {
-      transform: scale(1.1);
+      transform: scale(1.05);
     }
     &.workout {
       background: linear-gradient(to top, #060606c7 5%, transparent 100%),
@@ -498,17 +500,17 @@ export default {
       img {
         border-bottom-right-radius: 2rem;
       }
-    }
-    .card-details {
-      text-align: center;
-      margin-top: 1.5rem;
-      h5 {
-        font-size: 1rem;
-        margin: 0.5rem 0;
-      }
-      .card-text {
-        color: $primaryColor;
-        font-size: 0.75rem;
+      .card-details {
+        text-align: center;
+        margin-top: 1.5rem;
+        h5 {
+          font-size: 1rem;
+          margin: 0.5rem 0;
+        }
+        .card-text {
+          color: $primaryColor;
+          font-size: 0.75rem;
+        }
       }
     }
   }
@@ -556,6 +558,10 @@ export default {
     border: 2px solid #3240c1;
     color: $lightestColor;
     text-align: center;
+    transition: all 250ms linear;
+    &:hover {
+      transform: scale(1.05);
+    }
     .card-title {
       margin: 2rem 0;
       .subtitle {
@@ -567,6 +573,33 @@ export default {
       color: $jumbo;
       margin: 2rem 0;
       line-height: 1.5rem;
+    }
+  }
+}
+.latest-articles {
+  .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 0;
+    h4 {
+      font-size: 1.5rem;
+    }
+    .all .fa-chevron-right {
+      font-size: 0.75rem;
+    }
+  }
+  .card {
+    .card-details {
+      padding: 1.5rem 1rem;
+      h5 {
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+      }
+      .card-text {
+        color: $jumbo;
+        font-size: 0.75rem;
+      }
     }
   }
 }
