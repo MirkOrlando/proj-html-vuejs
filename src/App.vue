@@ -185,6 +185,35 @@
         </div>
       </section>
       <!-- /.plans -->
+      <div class="latest-articles py-6">
+        <div class="container">
+          <div class="top">
+            <h4>Latest articles</h4>
+            <div class="all">
+              Read all articles
+              <font-awesome-icon icon="fa-solid fa-chevron-right" />
+            </div>
+          </div>
+          <div class="row g-2">
+            <div
+              class="col-4"
+              v-for="(article, index) in articles"
+              :key="index"
+            >
+              <div class="card">
+                <div class="card-video p-relative">
+                  <img :src="article.src" alt="" />
+                </div>
+              </div>
+              <div class="card-details">
+                <h5>{{ article.title }}</h5>
+                <p class="card-text">{{ article.text }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.latest-articles -->
     </main>
     <SiteFooter />
   </div>
@@ -260,6 +289,23 @@ export default {
           subtitle: "Shed those pounds",
           text: "At laoreet senectus volutpat diam vel sed sed amet pellentesque. Lobortis ut aliquam risus purus. A tellus ut etiam.",
           action: "Schedule a workout",
+        },
+      ],
+      articles: [
+        {
+          title: "The best protein shake",
+          text: "By admin | Novembre 16th, 2019 | Gym",
+          src: require("@/assets/img/blog4-2x-800x515.jpg"),
+        },
+        {
+          title: "Lift, firm & perk up",
+          text: "By admin | Novembre 16th, 2019 | Gym",
+          src: require("@/assets/img/blog3-2x-800x515.jpg"),
+        },
+        {
+          title: "Slim & trim your waist",
+          text: "By admin | Novembre 16th, 2019 | Gym",
+          src: require("@/assets/img/blog1-2x-800x515.jpg"),
         },
       ],
     };
