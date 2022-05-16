@@ -6,24 +6,29 @@
           <img src="@/assets/img/logo.png" alt="logo" />
         </div>
         <div class="nav-menu">
-          <ul class="nav-items">
-            <li
-              v-for="(navItem, index) in navItems"
-              :key="index"
-              :class="getNavItemClass(index)"
-              @click="getActiveNavItem(index)"
-            >
-              <a href="#">{{ navItem }}</a>
-            </li>
-          </ul>
-          <div class="nav-actions">
-            <a href="#" class="btn btn-primary">Schedule a Workout</a>
-            <a href="#" class="mx-2">
-              <font-awesome-icon icon="fa-solid fa-cart-shopping" />
-            </a>
-            <a href="#">
-              <font-awesome-icon icon="fa-solid fa-magnifying-glass" />
-            </a>
+          <a href="#" class="btn btn-hamburger">
+            <font-awesome-icon icon="fa-solid fa-bars" />
+          </a>
+          <div class="collapse-menu">
+            <ul class="nav-items">
+              <li
+                v-for="(navItem, index) in navItems"
+                :key="index"
+                :class="getNavItemClass(index)"
+                @click="getActiveNavItem(index)"
+              >
+                <a href="#">{{ navItem }}</a>
+              </li>
+            </ul>
+            <div class="nav-actions">
+              <a href="#" class="btn btn-primary">Schedule a Workout</a>
+              <a href="#" class="mx-2">
+                <font-awesome-icon icon="fa-solid fa-cart-shopping" />
+              </a>
+              <a href="#">
+                <font-awesome-icon icon="fa-solid fa-magnifying-glass" />
+              </a>
+            </div>
           </div>
         </div>
       </nav>

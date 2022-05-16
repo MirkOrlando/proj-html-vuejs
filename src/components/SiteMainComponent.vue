@@ -589,12 +589,11 @@ export default {
         text-align: center;
         margin-top: 1.5rem;
         h5 {
-          font-size: 1rem;
+          font-size: 1.25em;
           margin: 0.5rem 0;
         }
         .card-text {
           color: $primaryColor;
-          font-size: 0.75rem;
         }
       }
     }
@@ -678,7 +677,6 @@ export default {
     }
   }
   .card {
-    /* background: linear-gradient(to top, #4154fe8f 5%, transparent 100%) */
     transition: all 250ms linear;
 
     .card-image {
@@ -723,7 +721,7 @@ export default {
       }
       .card-text {
         color: $jumbo;
-        font-size: 0.75rem;
+        font-size: 0.85rem;
       }
     }
   }
