@@ -269,6 +269,17 @@
         </div>
       </div>
       <!-- /.partners -->
+      <section class="jumbo-workout">
+        <PlayButton />
+        <h2>Crossfit workout of the day</h2>
+        <div class="day">November 15th,2019</div>
+        <div class="action">
+          <a href="#">
+            Viev all videos <font-awesome-icon icon="fa-solid fa-arrow-right" />
+          </a>
+        </div>
+      </section>
+      <!-- /.jumbo-workout -->
     </main>
     <SiteFooter />
   </div>
