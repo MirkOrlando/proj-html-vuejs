@@ -30,7 +30,7 @@
               </div>
               <!-- /.take-control -->
             </div>
-            <div class="col-4 d-flex justify-content-center align-item-center">
+            <div class="col-4 p-relative">
               <PlayButton />
             </div>
           </div>
@@ -75,7 +75,8 @@
         <!-- add .container-lg -->
         <div class="row">
           <div class="col-6">
-            <div class="video">
+            <div class="video p-relative">
+              <img src="@/assets/img/service15-2x.jpg" alt="" />
               <PlayButton />
             </div>
           </div>
@@ -110,7 +111,7 @@
             </div>
           </div>
         </div>
-        <div class="featured-playlist">
+        <div class="featured-playlist py-4">
           <div class="container">
             <div class="top">
               <h4>Featured playlist</h4>
@@ -119,7 +120,7 @@
                 <font-awesome-icon icon="fa-solid fa-chevron-right" />
               </p>
             </div>
-            <div class="row py-4"></div>
+            <div class="row"></div>
           </div>
         </div>
       </section>
@@ -162,6 +163,23 @@ export default {
           title: "Team training",
           text: "Find a partner",
           class: "team",
+        },
+      ],
+      featuredVideos: [
+        {
+          title: "Thighs & glute workout",
+          text: "Increase your mobility",
+          class: "mobility",
+        },
+        {
+          title: "Lift, firm & perk up",
+          text: "Feel young again",
+          class: "mobility",
+        },
+        {
+          title: "Thighs & glute workout",
+          text: "Increase your mobility",
+          class: "mobility",
         },
       ],
     };
@@ -274,16 +292,16 @@ export default {
 }
 .videos {
   .video {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 700px;
-    background-image: url("@/assets/img/service15-2x.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     margin-top: -3rem;
-    border-bottom-right-radius: 2rem;
+    &,
+    img {
+      border-bottom-right-radius: 2rem;
+    }
+    img {
+      filter: brightness(0.9);
+      object-fit: cover;
+      object-position: center;
+    }
   }
   .wrapper {
     padding: 6rem;

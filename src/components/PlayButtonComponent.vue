@@ -13,6 +13,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.action {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .action .fa-play {
   color: $primaryColor;
   aspect-ratio: 1/1;
