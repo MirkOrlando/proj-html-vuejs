@@ -70,6 +70,7 @@
       </div>
       <!-- /.quote -->
       <section class="videos">
+        <!-- add .container-lg -->
         <div class="row">
           <div class="col-6">
             <div class="video">
@@ -84,17 +85,21 @@
                 <div class="pic">
                   <img src="@/assets/img/yt_channel_pic.jpg" alt="" />
                 </div>
-                <div class="name">ThemeFusion</div>
-                <div class="badge">
-                  <div class="brand">
-                    <font-awesome-icon icon="fa-brands fa-youtube" /> YouTube
+                <div class="dettails">
+                  <div class="name">ThemeFusion</div>
+                  <div class="badge">
+                    <div class="brand">
+                      <font-awesome-icon icon="fa-brands fa-youtube" /> YouTube
+                    </div>
+                    <div class="subscribers">999+</div>
                   </div>
-                  <div class="subscribers">999+</div>
                 </div>
-                <p class="text">
-                  Arcu eu facilisi ut quisque placerat nunc habitant. Magna
-                  semper maurid, venenatis, leo integer sit pellentesque.
-                </p>
+              </div>
+              <p class="text">
+                Arcu eu facilisi ut quisque placerat nunc habitant. Magna semper
+                maurid, venenatis, leo integer sit pellentesque.
+              </p>
+              <div class="action">
                 <a href="#" class="btn btn-alert">
                   <font-awesome-icon icon="fa-brands fa-youtube" /> Visit my
                   YouTube channel
@@ -259,6 +264,57 @@ export default {
     background-image: url("@/assets/img/service15-2x.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+  }
+  .wrapper {
+    padding: 6rem;
+    h4 {
+      color: $primaryColor;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 2.5rem;
+      margin: 2rem 0;
+    }
+    .youtube-channel {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin: 2rem 0;
+      color: $jumbo;
+      font-size: 0.75rem;
+      .pic {
+        &,
+        img {
+          border-radius: 50%;
+        }
+      }
+      .name {
+        margin-bottom: 0.5rem;
+      }
+      .badge {
+        display: flex;
+        .brand {
+          color: $lightestColor;
+          background-color: $youtubeBrandColor;
+        }
+        .subscribers {
+          border: 1px solid $jumbo;
+        }
+        .brand,
+        .subscribers {
+          display: flex;
+          align-items: center;
+          padding: 0.25rem;
+        }
+      }
+    }
+    .text {
+      color: $jumbo;
+      margin: 2rem 0;
+    }
+    .action {
+      margin-top: 3rem;
+    }
   }
 }
 </style>
