@@ -53,14 +53,19 @@
       <!-- /.jumbotron -->
       <div class="quote">
         <p class="text">
-          "How You respond to the challenge in the second half will determine
-          what you become after the game, whether you are a winner or a loser."
+          "How You respond to the challenge in the second half
+          <br />
+          will determine what you become after the game,
+          <br />
+          whether you are a winner or a loser."
         </p>
         <SeparatorLg />
         <div class="user">
-          <img src="@/assets/img/avatar-1-2x.jpg" alt="" />
+          <div class="userpic">
+            <img src="@/assets/img/avatar-1-2x.jpg" alt="" />
+          </div>
           <span class="username">Brad Johnson</span>
-          <span class="location"></span>
+          <span class="location">Los Angeles</span>
         </div>
       </div>
     </main>
@@ -146,6 +151,7 @@ export default {
     background-size: cover;
     border-radius: 0.25rem;
     border-bottom-right-radius: 2rem;
+    margin-bottom: -20rem;
     transition: all 250ms linear;
     &:hover {
       transform: scale(1.1);
@@ -182,5 +188,29 @@ export default {
 }
 .quote {
   text-align: center;
+  color: $lightestColor;
+  background: linear-gradient(160deg, #0219eb, #d4000c);
+  padding: 6rem 0;
+  .text {
+    font-size: 2rem;
+    margin-top: 20rem;
+  }
+  .user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: -1rem;
+    .userpic {
+      width: 50px;
+      &,
+      img {
+        border-radius: 50%;
+      }
+    }
+    .location {
+      color: #d9aec8;
+    }
+  }
 }
 </style>
