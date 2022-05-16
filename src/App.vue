@@ -203,12 +203,15 @@
               :key="index"
             >
               <div class="card">
-                <div class="card-image">
-                  <img :src="article.src" alt="" />
+                <div class="card-image p-relative" :class="article.class">
+                  <div class="card-image-helper"></div>
                 </div>
                 <div class="card-details">
                   <h5>{{ article.title }}</h5>
-                  <p class="card-text">{{ article.text }}</p>
+                  <p class="card-text">
+                    By <strong>{{ article.author }}</strong> |
+                    {{ article.date }} | <strong>{{ article.category }}</strong>
+                  </p>
                 </div>
               </div>
             </div>
@@ -296,18 +299,24 @@ export default {
       articles: [
         {
           title: "The best protein shake",
-          text: "By admin | Novembre 16th, 2019 | Gym",
-          src: require("@/assets/img/blog4-2x-800x515.jpg"),
+          author: "admin",
+          date: "Novembre 16th, 2019",
+          category: "Gym",
+          class: "protein",
         },
         {
-          title: "Lift, firm & perk up",
-          text: "By admin | Novembre 16th, 2019 | Gym",
-          src: require("@/assets/img/blog3-2x-800x515.jpg"),
+          title: "Ultimate cardio workout",
+          author: "admin",
+          date: "Novembre 16th, 2019",
+          category: "Gym",
+          class: "workout",
         },
         {
-          title: "Slim & trim your waist",
-          text: "By admin | Novembre 16th, 2019 | Gym",
-          src: require("@/assets/img/blog1-2x-800x515.jpg"),
+          title: "New juices available now",
+          author: "admin",
+          date: "Novembre 16th, 2019",
+          category: "Gym",
+          class: "juices",
         },
       ],
     };
@@ -590,6 +599,43 @@ export default {
     }
   }
   .card {
+    /* background: linear-gradient(to top, #4154fe8f 5%, transparent 100%) */
+    transition: all 250ms linear;
+
+    .card-image {
+      transition: all 250ms linear;
+      .card-image-helper {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(to top, #4154fe8f 5%, transparent 100%);
+        opacity: 0;
+        transition: all 250ms linear;
+      }
+      &.protein {
+        min-height: 250px;
+        background-image: url("@/assets/img/blog4-2x-800x515.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: all 250ms linear;
+      }
+      &.workout {
+        min-height: 250px;
+        background-image: url("@/assets/img/blog1-2x-800x515.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      &.juices {
+        min-height: 250px;
+        background-image: url("@/assets/img/blog3-2x-800x515.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+    &:hover .card-image-helper {
+      opacity: 1;
+    }
     .card-details {
       padding: 1.5rem 1rem;
       h5 {
