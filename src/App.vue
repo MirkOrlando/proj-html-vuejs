@@ -71,7 +71,11 @@
       <!-- /.quote -->
       <section class="videos">
         <div class="row">
-          <div class="col-6"></div>
+          <div class="col-6">
+            <div class="video">
+              <PlayButton />
+            </div>
+          </div>
           <div class="col-6">
             <div class="wrapper">
               <h4>Tune up your workouts</h4>
@@ -244,6 +248,17 @@ export default {
     .location {
       color: #d9aec8;
     }
+  }
+}
+.videos {
+  .video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-image: url("@/assets/img/service15-2x.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
 </style>
