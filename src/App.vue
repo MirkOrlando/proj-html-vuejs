@@ -9,11 +9,7 @@
               <div class="take-control">
                 <h5>Certified fitness professional</h5>
                 <h1>Take control of your health</h1>
-                <div class="separator">
-                  <font-awesome-icon icon="fa-solid fa-chevron-up" />
-                  <font-awesome-icon icon="fa-solid fa-chevron-up" />
-                  <font-awesome-icon icon="fa-solid fa-chevron-up" />
-                </div>
+                <SeparatorLg />
                 <p class="text">
                   Curabitur non nulla sit amet nisl tempus convallis quis ac
                   lectus dolor sit amet.
@@ -32,6 +28,7 @@
                   </a>
                 </div>
               </div>
+              <!-- /.take-control -->
             </div>
             <div class="col-4 d-flex justify-content-center align-item-center">
               <PlayButton />
@@ -42,11 +39,7 @@
               <div class="col-4" v-for="(offer, index) in offers" :key="index">
                 <div class="card" :class="offer.class">
                   <div class="offer-details">
-                    <div class="separator">
-                      <font-awesome-icon icon="fa-solid fa-chevron-up" />
-                      <font-awesome-icon icon="fa-solid fa-chevron-up" />
-                      <font-awesome-icon icon="fa-solid fa-chevron-up" />
-                    </div>
+                    <SeparatorSm />
                     <h3 class="title">{{ offer.title }}</h3>
                     <p class="text">{{ offer.text }}</p>
                   </div>
@@ -54,9 +47,22 @@
               </div>
             </div>
           </div>
+          <!-- /.offers -->
         </div>
       </section>
       <!-- /.jumbotron -->
+      <div class="quote">
+        <p class="text">
+          "How You respond to the challenge in the second half will determine
+          what you become after the game, whether you are a winner or a loser."
+        </p>
+        <SeparatorLg />
+        <div class="user">
+          <img src="@/assets/img/avatar-1-2x.jpg" alt="" />
+          <span class="username">Brad Johnson</span>
+          <span class="location"></span>
+        </div>
+      </div>
     </main>
     <SiteFooter />
   </div>
@@ -67,12 +73,16 @@ import SiteHeader from "@/components/SiteHeaderComponent.vue";
 import SiteFooter from "@/components/SiteFooterComponent.vue";
 /* to put in SiteMainComponent */
 import PlayButton from "@/components/PlayButtonComponent.vue";
+import SeparatorLg from "@/components/SeparatorLgComponent.vue";
+import SeparatorSm from "@/components/SeparatorSmComponent.vue";
 export default {
   name: "App",
   components: {
     SiteHeader,
     SiteFooter,
     PlayButton,
+    SeparatorLg,
+    SeparatorSm,
   },
   data() {
     return {
@@ -118,11 +128,6 @@ export default {
       font-weight: 400;
       margin: 1rem 0;
     }
-    .separator {
-      color: $new;
-      margin: 2rem 0;
-      font-size: 1.5rem;
-    }
     .text {
       color: $jumbo;
       margin: 2rem 0;
@@ -166,10 +171,6 @@ export default {
     bottom: 2rem;
     left: 2rem;
     color: $lightestColor;
-    .separator {
-      margin: 1rem 0;
-      font-size: unset;
-    }
     h3 {
       font-size: 1.25rem;
       margin: 0.5rem 0;
@@ -178,5 +179,8 @@ export default {
       color: $new;
     }
   }
+}
+.quote {
+  text-align: center;
 }
 </style>
