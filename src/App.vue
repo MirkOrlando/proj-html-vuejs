@@ -138,6 +138,28 @@
         </div>
       </section>
       <!-- /.videos -->
+      <section class="mailing-list">
+        <div class="container">
+          <div class="row py-4">
+            <div class="col-8">
+              <div class="wrapper">
+                <h5>Join our mailing list today</h5>
+                <h2>Insider offers & flash sales in your inbox every week.</h2>
+                <SeparatorLg />
+                <div class="action">
+                  <input type="text" placeholder="Insert your email...*" />
+                  <a href="#" class="btn btn-primary">Subscribe</a>
+                </div>
+                <p class="text">
+                  Curabitur non nulla sit amet nisl tempus convallis quis ac
+                  lectus dolor sit amet.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /.mailing-list -->
     </main>
     <SiteFooter />
   </div>
