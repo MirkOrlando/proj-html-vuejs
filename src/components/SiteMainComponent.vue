@@ -1,6 +1,19 @@
 <template>
   <main>
     <BookMark />
+    <!-- ./BookMark -->
+    <div class="badges">
+      <div class="demo">
+        <div class="icon">
+          <font-awesome-icon icon="fa-regular fa-folder-open" />
+        </div>
+        <div class="text">Demos</div>
+      </div>
+      <div class="price">
+        <div class="number"><span>$</span>39</div>
+        <div class="text">On Sale</div>
+      </div>
+    </div>
     <section class="jumbotron">
       <div class="container">
         <div class="row py-4">
@@ -193,6 +206,30 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.badges {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: fixed;
+  top: 8rem;
+  right: 0;
+  .demo,
+  .price {
+    background-color: $lightestColor;
+    width: fit-content;
+    padding: 0.25rem;
+    aspect-ratio: 1/1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .demo {
+    .icon {
+      font-size: 2rem;
+    }
+  }
+}
 .jumbotron {
   background: linear-gradient(to right, #060606, #060606 45%, transparent 76%),
     url(@/assets/img/slider82x-scaled.jpg);
