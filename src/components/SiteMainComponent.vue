@@ -209,24 +209,41 @@ export default {
 .badges {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
   position: fixed;
   top: 8rem;
-  right: 0;
+  right: 0.5rem;
+  color: #33475b;
+  z-index: 90;
+  .text {
+    font-size: 0.75rem;
+  }
   .demo,
   .price {
     background-color: $lightestColor;
     width: fit-content;
     padding: 0.25rem;
+    margin: 0.25rem;
     aspect-ratio: 1/1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 0.5rem;
+    border: 1px solid #33475b;
   }
   .demo {
     .icon {
       font-size: 2rem;
+    }
+  }
+  .price {
+    .number {
+      color: #65bc7b;
+      font-size: 2rem;
+      span {
+        font-size: 1rem;
+        vertical-align: super;
+      }
     }
   }
 }
@@ -442,6 +459,12 @@ export default {
     font-weight: bold;
     margin: 0.5rem 0;
     color: $new;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .badges {
+    display: none;
   }
 }
 
