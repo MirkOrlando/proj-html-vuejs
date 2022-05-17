@@ -643,7 +643,7 @@ export default {
     margin: 2rem 0;
     input {
       width: calc(70% - 1rem);
-      padding: 1rem;
+      padding: 0.75rem;
       margin-right: 1rem;
       border-radius: 2rem;
     }
@@ -810,6 +810,9 @@ export default {
     padding: 1.5rem;
     background-color: $lightestColor;
     border-radius: 50%;
+    &:hover {
+      color: $liteAlertColor;
+    }
   }
   h2 {
     font-size: 2rem;

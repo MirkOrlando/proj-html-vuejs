@@ -25,5 +25,9 @@ export default {
   padding: 1.5rem;
   background-color: $lightestColor;
   border-radius: 50%;
+  transition: all 250ms linear;
+  &:hover {
+    color: $liteAlertColor;
+  }
 }
 </style>

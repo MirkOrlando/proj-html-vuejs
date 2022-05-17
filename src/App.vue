@@ -88,7 +88,7 @@ export default {
               }
             }
             a {
-              padding: 1rem;
+              padding: 0.5rem;
               margin: 0;
               display: block;
             }
@@ -108,6 +108,9 @@ export default {
                 transition: all 1000ms linear;
                 &:focus {
                   width: 100%;
+                }
+                &:focus-visible {
+                  outline: unset;
                 }
               }
               a {
