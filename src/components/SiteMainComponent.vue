@@ -771,8 +771,9 @@ export default {
       rgba(0, 0, 255, 0.4),
       rgba(255, 0, 0, 0.4)
     ),
-    url(http://localhost:8080/img/banner14-2x.d58b9b75.jpg);
+    url(@/assets/img/banner14-2x.jpg);
   filter: brightness(70%) saturate(80%) contrast(130%) opacity(95%);
+  background-position: center;
   background-size: cover;
   text-align: center;
   padding: 10rem 0;

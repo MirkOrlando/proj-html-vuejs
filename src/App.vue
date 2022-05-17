@@ -28,11 +28,11 @@ export default {
     position: relative;
     nav {
       .nav-menu {
-        a.nav-toggler {
+        .collapse-togglers {
           display: block;
         }
         .collapse-menu {
-          display: block;
+          display: none;
           position: absolute;
           left: 0;
           top: 100%;
@@ -40,6 +40,14 @@ export default {
           color: $lightestColor;
           width: 100%;
           z-index: 100;
+          transition: all 250ms linear;
+          &.show-menu {
+            display: block;
+            animation: show 500ms linear forwards;
+          }
+          &.hide-menu {
+            animation: hide 500ms linear forwards;
+          }
           .nav-items {
             display: block;
             li {
@@ -114,6 +122,25 @@ export default {
         }
       }
     }
+  }
+}
+
+/* animation show menu */
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes hide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 </style>
