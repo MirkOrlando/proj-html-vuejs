@@ -43,5 +43,8 @@ li {
   &.active {
     color: $lightestColor;
   }
+  & a:hover {
+    color: $lightestColor;
+  }
 }
 </style>
