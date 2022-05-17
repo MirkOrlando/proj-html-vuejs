@@ -142,9 +142,13 @@ export default {
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 768px) {
   .row-sm {
     flex-wrap: wrap;
+  }
+
+  .col-sm {
+    width: 100%;
   }
 
   .col-sm-6 {

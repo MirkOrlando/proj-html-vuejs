@@ -2,8 +2,8 @@
   <footer>
     <div class="footer-top py-4">
       <div class="container">
-        <div class="row">
-          <div class="col-4">
+        <div class="row row-sm">
+          <div class="col-4 col-sm-6">
             <div class="social">
               <div class="logo">
                 <img src="@/assets/img/logo-200x34.png" alt="logo" />
@@ -28,7 +28,7 @@
               </div>
             </div>
           </div>
-          <div class="col-4">
+          <div class="col-4 col-sm-6">
             <div class="recent-posts">
               <h4>Recent Posts</h4>
               <ul>
@@ -41,7 +41,7 @@
               </ul>
             </div>
           </div>
-          <div class="col-4">
+          <div class="col-4 col-sm-6">
             <div class="contacts">
               <h4>Contact Information</h4>
               <p class="address">4746 Tippòe Rpad Michigan 48449</p>

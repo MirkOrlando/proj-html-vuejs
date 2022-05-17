@@ -32,7 +32,7 @@
         <div class="offers">
           <div class="row row-sm">
             <div
-              class="col-4 col-sm-6"
+              class="col-4 col-sm"
               v-for="(offer, index) in offers"
               :key="index"
             >
@@ -118,8 +118,12 @@
               <font-awesome-icon icon="fa-solid fa-chevron-right" />
             </div>
           </div>
-          <div class="row">
-            <div class="col-4" v-for="(video, index) in videos" :key="index">
+          <div class="row row-sm">
+            <div
+              class="col-4 col-sm-6"
+              v-for="(video, index) in videos"
+              :key="index"
+            >
               <div class="card">
                 <div class="card-video p-relative">
                   <img :src="video.src" alt="" />
@@ -201,8 +205,12 @@
             </a>
           </div>
         </div>
-        <div class="row">
-          <div class="col-4" v-for="(article, index) in articles" :key="index">
+        <div class="row row-sm">
+          <div
+            class="col-4 col-sm-6"
+            v-for="(article, index) in articles"
+            :key="index"
+          >
             <div class="card">
               <div class="card-image p-relative" :class="article.class">
                 <div class="card-image-helper"></div>
@@ -443,47 +451,49 @@ export default {
       }
     }
   }
-  .card {
-    position: relative;
-    height: 100%;
-    min-height: 400px;
-    border-radius: 0.25rem;
-    border-bottom-right-radius: 2rem;
+  .offers {
     margin-bottom: -20rem;
-    transition: all 250ms linear;
-    &:hover {
-      transform: scale(1.05);
-    }
-    &.workout {
-      background: linear-gradient(to top, #060606c7 5%, transparent 100%),
-        url("@/assets/img/service6-2x.jpg");
-      background-size: cover;
-      background-position: center;
-    }
-    &.apparel {
-      background: linear-gradient(to top, #060606c7 5%, transparent 100%),
-        url("@/assets/img/box1-2x.jpg");
-      background-size: cover;
-      background-position: center;
-    }
-    &.team {
-      background: linear-gradient(to top, #060606c7 5%, transparent 100%),
-        url("@/assets/img/box3-2x.jpg");
-      background-size: cover;
-      background-position: center;
-    }
-  }
-  .offer-details {
-    position: absolute;
-    bottom: 2rem;
-    left: 2rem;
-    color: $lightestColor;
-    h3 {
-      font-size: 1.25rem;
-      margin: 0.5rem 0;
-    }
-    .text {
-      color: $new;
+    .card {
+      position: relative;
+      height: 100%;
+      min-height: 400px;
+      border-radius: 0.25rem;
+      border-bottom-right-radius: 2rem;
+      transition: all 250ms linear;
+      &:hover {
+        transform: scale(1.05);
+      }
+      &.workout {
+        background: linear-gradient(to top, #060606c7 5%, transparent 100%),
+          url("@/assets/img/service6-2x.jpg");
+        background-size: cover;
+        background-position: center;
+      }
+      &.apparel {
+        background: linear-gradient(to top, #060606c7 5%, transparent 100%),
+          url("@/assets/img/box1-2x.jpg");
+        background-size: cover;
+        background-position: center;
+      }
+      &.team {
+        background: linear-gradient(to top, #060606c7 5%, transparent 100%),
+          url("@/assets/img/box3-2x.jpg");
+        background-size: cover;
+        background-position: center;
+      }
+      .offer-details {
+        position: absolute;
+        bottom: 2rem;
+        left: 2rem;
+        color: $lightestColor;
+        h3 {
+          font-size: 1.25rem;
+          margin: 0.5rem 0;
+        }
+        .text {
+          color: $new;
+        }
+      }
     }
   }
 }
@@ -809,6 +819,31 @@ export default {
     font-weight: bold;
     margin: 0.5rem 0;
     color: $new;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .jumbotron {
+    .offers {
+      margin-bottom: -110rem;
+      .card {
+        min-height: 600px;
+        &.workout {
+          background-position: top;
+        }
+        &.apparel {
+          background-position: top;
+        }
+        &.team {
+          background-position: top;
+        }
+      }
+    }
+  }
+  .quote {
+    .wrapper {
+      margin-top: 110rem;
+    }
   }
 }
 </style>
