@@ -119,36 +119,7 @@
       </div>
     </section>
     <!-- /.mailing-list -->
-    <section class="plans">
-      <div class="container">
-        <div class="row row-md">
-          <div
-            class="col-4 col-md-6 col-xs"
-            v-for="(plan, index) in plans"
-            :key="index"
-          >
-            <div class="card">
-              <div class="card-icon">
-                <font-awesome-icon :icon="plan.icon" />
-              </div>
-              <div class="card-title">
-                <h3 class="title">{{ plan.title }}</h3>
-                <h4 class="subtitle">{{ plan.subtitle }}</h4>
-              </div>
-              <div class="card-body">
-                <p>{{ plan.text }}</p>
-              </div>
-              <div class="card-action">
-                <a href="#">
-                  {{ plan.action }}
-                  <font-awesome-icon icon="fa-solid fa-chevron-right" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <Plans />
     <!-- /.plans -->
     <div class="latest-articles py-6">
       <div class="container">
@@ -260,6 +231,7 @@ import SeparatorLg from "@/components/SeparatorLgComponent.vue";
 import PlayButton from "@/components/PlayButtonComponent.vue";
 import OfferList from "@/components/OfferListComponent.vue";
 import FeaturedPlaylist from "@/components/FeaturedPlaylistComponent.vue";
+import Plans from "@/components/PlansComponent.vue";
 import SeparatorSmPrimary from "@/components/SeparatorSmPrimaryComponent.vue";
 
 export default {
@@ -270,33 +242,11 @@ export default {
     SeparatorLg,
     OfferList,
     FeaturedPlaylist,
+    Plans,
     SeparatorSmPrimary,
   },
   data() {
     return {
-      plans: [
-        {
-          icon: "fa-regular fa-clock",
-          title: "Team training",
-          subtitle: "Find a partner",
-          text: "Vestibulum, curabitur eu sem nibh ultrices sit nulla asipiscing. Nils sit fames amet senectus eget sed duis vehicula. Tristique.",
-          action: "Find a partner",
-        },
-        {
-          icon: "fa-solid fa-dumbbell",
-          title: "Crossfit workout",
-          subtitle: "Push your limits",
-          text: "Vestibulum, curabitur eu sem nibh ultrices sit nulla asipiscing. Nils sit fames amet senectus eget sed duis vehicula. Tristique.",
-          action: "Learn about Crossfit",
-        },
-        {
-          icon: "fa-solid fa-bolt",
-          title: "Weight loss plan",
-          subtitle: "Shed those pounds",
-          text: "At laoreet senectus volutpat diam vel sed sed amet pellentesque. Lobortis ut aliquam risus purus. A tellus ut etiam.",
-          action: "Schedule a workout",
-        },
-      ],
       articles: [
         {
           title: "The best protein shake",
@@ -505,36 +455,6 @@ export default {
   }
   .text {
     color: $jumbo;
-  }
-}
-.plans {
-  background-color: $darkestColor;
-  padding: 6rem 0;
-  .card {
-    height: 100%;
-    padding: 4rem 3rem;
-    border: 2px solid #3240c1;
-    color: $lightestColor;
-    text-align: center;
-    transition: all 250ms linear;
-    &:hover {
-      transform: scale(1.05);
-    }
-    .card-icon {
-      font-size: 4rem;
-    }
-    .card-title {
-      margin: 2rem 0;
-      .subtitle {
-        color: $new;
-        margin: 0.5rem 0;
-      }
-    }
-    .card-body {
-      color: $jumbo;
-      margin: 2rem 0;
-      line-height: 1.5rem;
-    }
   }
 }
 .latest-articles {

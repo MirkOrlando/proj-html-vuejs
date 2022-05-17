@@ -27,3 +27,21 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+li {
+  display: flex;
+  padding: 0 1rem;
+  &.new a:after {
+    content: "new";
+    font-size: 0.75rem;
+    color: $darkestColor;
+    margin-left: 0.5rem;
+    padding: 0.5rem;
+    background-color: $new;
+  }
+  &.active {
+    color: $lightestColor;
+  }
+}
+</style>
