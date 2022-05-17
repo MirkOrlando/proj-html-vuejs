@@ -6,7 +6,7 @@
           <img src="@/assets/img/logo.png" alt="logo" />
         </div>
         <div class="nav-menu">
-          <a href="#" class="btn btn-hamburger">
+          <a href="#" class="btn btn-hamburger nav-toggler">
             <font-awesome-icon icon="fa-solid fa-bars" />
           </a>
           <div class="collapse-menu">
@@ -22,12 +22,16 @@
             </ul>
             <div class="nav-actions">
               <a href="#" class="btn btn-primary">Schedule a Workout</a>
+              <div class="ex-btn">Schedule a Workout</div>
               <a href="#" class="mx-2">
                 <font-awesome-icon icon="fa-solid fa-cart-shopping" />
               </a>
-              <a href="#">
-                <font-awesome-icon icon="fa-solid fa-magnifying-glass" />
-              </a>
+              <div class="search">
+                <input type="text" />
+                <a href="#">
+                  <font-awesome-icon icon="fa-solid fa-magnifying-glass" />
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -73,6 +77,14 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    .nav-toggler {
+      display: none;
+    }
+    .collapse-menu {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
     .nav-menu {
       display: flex;
       gap: 1rem;
@@ -95,6 +107,18 @@ header {
           }
           &.active {
             color: $lightestColor;
+          }
+        }
+      }
+      .nav-actions {
+        display: flex;
+        align-items: center;
+        .ex-btn {
+          display: none;
+        }
+        .search {
+          input {
+            display: none;
           }
         }
       }

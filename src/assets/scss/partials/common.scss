@@ -49,14 +49,9 @@ img {
 }
 
 .btn-hamburger {
-    padding: 1rem 1.25rem;
+    padding: 0.5rem 0.75rem;
     border-radius: 0.5rem;
     border-color: $lightestColor;
-    display: none;
-}
-
-.btn-hamburger:hover {
-    box-shadow: inset 0 0 10px $lightestColor;
 }
 
 #app {
