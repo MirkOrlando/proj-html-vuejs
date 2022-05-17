@@ -121,39 +121,7 @@
     <!-- /.mailing-list -->
     <Plans />
     <!-- /.plans -->
-    <div class="latest-articles py-6">
-      <div class="container">
-        <div class="top">
-          <h4>Latest articles</h4>
-          <div class="all">
-            <a href="#">
-              Read all articles
-              <font-awesome-icon icon="fa-solid fa-chevron-right" />
-            </a>
-          </div>
-        </div>
-        <div class="row row-sm">
-          <div
-            class="col-4 col-sm-6 col-xs"
-            v-for="(article, index) in articles"
-            :key="index"
-          >
-            <div class="card">
-              <div class="card-image p-relative" :class="article.class">
-                <div class="card-image-helper"></div>
-              </div>
-              <div class="card-details">
-                <h5>{{ article.title }}</h5>
-                <p class="card-text">
-                  By <strong>{{ article.author }}</strong> |
-                  {{ article.date }} | <strong>{{ article.category }}</strong>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <LatestArticles />
     <!-- /.latest-articles -->
     <div class="jumbo-quote">
       <div class="wrapper">
@@ -178,33 +146,7 @@
       </div>
     </div>
     <!-- /.jumbo-quote -->
-    <div class="partners">
-      <div class="container">
-        <div class="row row-md">
-          <div
-            class="col-3 col-md-6 col-xs"
-            v-for="(partner, index) in partners"
-            :key="index"
-          >
-            <div class="card">
-              <div class="card-image">
-                <img :src="partner.src" alt="" />
-              </div>
-              <SeparatorSmPrimary />
-              <div class="card-text">
-                <p>{{ partner.text }}</p>
-              </div>
-              <div class="action">
-                <a href="#">
-                  {{ partner.action }}
-                  <font-awesome-icon icon="fa-solid fa-chevron-right" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <Partners />
     <!-- /.partners -->
     <section class="jumbo-workout">
       <div class="playaction">
@@ -232,7 +174,8 @@ import PlayButton from "@/components/PlayButtonComponent.vue";
 import OfferList from "@/components/OfferListComponent.vue";
 import FeaturedPlaylist from "@/components/FeaturedPlaylistComponent.vue";
 import Plans from "@/components/PlansComponent.vue";
-import SeparatorSmPrimary from "@/components/SeparatorSmPrimaryComponent.vue";
+import LatestArticles from "@/components/LatestArticlesComponent.vue";
+import Partners from "@/components/PartnersComponent.vue";
 
 export default {
   name: "SiteMainComponent",
@@ -243,56 +186,8 @@ export default {
     OfferList,
     FeaturedPlaylist,
     Plans,
-    SeparatorSmPrimary,
-  },
-  data() {
-    return {
-      articles: [
-        {
-          title: "The best protein shake",
-          author: "admin",
-          date: "Novembre 16th, 2019",
-          category: "Gym",
-          class: "protein",
-        },
-        {
-          title: "Ultimate cardio workout",
-          author: "admin",
-          date: "Novembre 16th, 2019",
-          category: "Gym",
-          class: "workout",
-        },
-        {
-          title: "New juices available now",
-          author: "admin",
-          date: "Novembre 16th, 2019",
-          category: "Gym",
-          class: "juices",
-        },
-      ],
-      partners: [
-        {
-          src: require("@/assets/img/sponsor-1-2x-200x103.png"),
-          text: "Tristique aliquam in nullam habitasse nunc, amet vel consectetur. Nulla in suspendisse dolor, aliquet.",
-          action: "Visit Yoga Studio",
-        },
-        {
-          src: require("@/assets/img/sponsor-2-2x-200x103.png"),
-          text: "Feugiat etiam dui mauris pharetra mayrus sed pharetra. Convallis sapien ornare cras faucibus nulla porta dui a.",
-          action: "Join Fitness Center",
-        },
-        {
-          src: require("@/assets/img/sponsor-3-2x-200x103.png"),
-          text: "Nist at quam adipiscing montes, nec, adipiscing commodo aliquam tincidunt. Lugula in habitant et saggitis imperdiet.",
-          action: "Learn about FC",
-        },
-        {
-          src: require("@/assets/img/sponsor-4-2x-200x103.png"),
-          text: "Proin in viverra maecenas et mattis ut nibh enim. Gravida ultricies mi porta lacus. Et posuere velit sed nec eleifend",
-          action: "Visit Power Gym",
-        },
-      ],
-    };
+    LatestArticles,
+    Partners,
   },
 };
 </script>
@@ -457,71 +352,6 @@ export default {
     color: $jumbo;
   }
 }
-.latest-articles {
-  .top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2rem 0;
-    h4 {
-      font-size: 1.5rem;
-    }
-    .all .fa-chevron-right {
-      font-size: 0.75rem;
-    }
-  }
-  .card {
-    transition: all 250ms linear;
-
-    .card-image {
-      transition: all 250ms linear;
-      .card-image-helper {
-        position: absolute;
-        top: 0;
-        height: 100%;
-        width: 100%;
-        background: linear-gradient(to top, #4154fe8f 5%, transparent 100%);
-        opacity: 0;
-        transition: all 250ms linear;
-      }
-      &.protein {
-        min-height: 250px;
-        background-image: url("@/assets/img/blog4-2x-800x515.jpg");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-      }
-      &.workout {
-        min-height: 250px;
-        background-image: url("@/assets/img/blog1-2x-800x515.jpg");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-      }
-      &.juices {
-        min-height: 250px;
-        background-image: url("@/assets/img/blog3-2x-800x515.jpg");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-      }
-    }
-    &:hover .card-image-helper {
-      opacity: 1;
-    }
-    .card-details {
-      padding: 1.5rem 1rem;
-      h5 {
-        font-size: 1.25rem;
-        margin-bottom: 0.5rem;
-      }
-      .card-text {
-        color: $jumbo;
-        font-size: 0.85rem;
-      }
-    }
-  }
-}
 .jumbo-quote {
   background: linear-gradient(to top, #000211f0 5%, transparent 100%),
     url("@/assets/img/banner2-2x.jpg");
@@ -539,24 +369,6 @@ export default {
     }
     .action {
       margin-top: 3rem;
-    }
-  }
-}
-.partners {
-  padding: 6rem 0;
-  .card {
-    text-align: center;
-    padding: 1rem;
-    .card-image {
-      margin-bottom: 1rem;
-    }
-    .card-text {
-      margin: 1rem 0;
-      color: $jumbo;
-      line-height: 1.5rem;
-    }
-    .action {
-      font-weight: bold;
     }
   }
 }
