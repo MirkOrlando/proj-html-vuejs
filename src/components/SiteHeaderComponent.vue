@@ -26,14 +26,13 @@
           </div>
           <div class="collapse-menu" ref="collapseMenu">
             <ul class="nav-items">
-              <li
+              <NavItem
+                :navItem="navItem"
+                :index="index"
                 v-for="(navItem, index) in navItems"
                 :key="index"
-                :class="getNavItemClass(index)"
-                @click="getActiveNavItem(index)"
-              >
-                <a href="#">{{ navItem }}</a>
-              </li>
+                @clickActive="getActiveNavItem(index)"
+              />
             </ul>
             <div class="nav-actions">
               <a href="#" class="btn btn-primary">Schedule a Workout</a>
@@ -58,8 +57,13 @@
 </template>
 
 <script>
+import state from "@/state.js";
+import NavItem from "@/components/NavItemComponent.vue";
 export default {
   name: "SiteHeaderComponent",
+  components: {
+    NavItem,
+  },
   data() {
     return {
       navItems: ["Home", "Services", "About", "Videos", "Blog", "Store"],
@@ -68,18 +72,7 @@ export default {
   },
   methods: {
     getActiveNavItem(i) {
-      this.activeNavItem = i;
-    },
-    getNavItemClass(i) {
-      if (this.navItems[i] === "Store" && this.activeNavItem === i) {
-        return "active new";
-      } else if (this.navItems[i] === "Store") {
-        return "new";
-      } else if (this.activeNavItem === i) {
-        return "active";
-      } else {
-        return "";
-      }
+      state.activeNavItem = i;
     },
     showMenu() {
       //console.log(this.$refs.collapseMenu);
