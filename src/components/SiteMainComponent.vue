@@ -30,24 +30,7 @@
             <PlayButton />
           </div>
         </div>
-        <div class="offers">
-          <div class="row row-sm">
-            <div
-              class="col-4 col-sm"
-              v-for="(offer, index) in offers"
-              :key="index"
-            >
-              <div class="card" :class="offer.class">
-                <div class="offer-details">
-                  <SeparatorSm />
-                  <h3 class="title">{{ offer.title }}</h3>
-                  <p class="text">{{ offer.text }}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- /.offers -->
+        <OfferList />
       </div>
     </section>
     <!-- /.jumbotron -->
@@ -301,9 +284,9 @@
 <script>
 /* to put in SiteMainComponent */
 import BookMark from "@/components/BookMarkComponent.vue";
-import PlayButton from "@/components/PlayButtonComponent.vue";
 import SeparatorLg from "@/components/SeparatorLgComponent.vue";
-import SeparatorSm from "@/components/SeparatorSmComponent.vue";
+import PlayButton from "@/components/PlayButtonComponent.vue";
+import OfferList from "@/components/OfferListComponent.vue";
 import SeparatorSmPrimary from "@/components/SeparatorSmPrimaryComponent.vue";
 
 export default {
@@ -312,28 +295,11 @@ export default {
     BookMark,
     PlayButton,
     SeparatorLg,
-    SeparatorSm,
+    OfferList,
     SeparatorSmPrimary,
   },
   data() {
     return {
-      offers: [
-        {
-          title: "Crossfit workout",
-          text: "Push your limits",
-          class: "workout",
-        },
-        {
-          title: "New gym apparel",
-          text: "Look good, feel good",
-          class: "apparel",
-        },
-        {
-          title: "Team training",
-          text: "Find a partner",
-          class: "team",
-        },
-      ],
       videos: [
         {
           title: "Thighs & glute workout",
@@ -451,51 +417,6 @@ export default {
       padding: 1rem 0;
       .btn:first-child {
         margin-right: 1rem;
-      }
-    }
-  }
-  .offers {
-    margin-bottom: -20rem;
-    .card {
-      position: relative;
-      height: 100%;
-      min-height: 400px;
-      border-radius: 0.25rem;
-      border-bottom-right-radius: 2rem;
-      transition: all 250ms linear;
-      &:hover {
-        transform: scale(1.05);
-      }
-      &.workout {
-        background: linear-gradient(to top, #060606c7 5%, transparent 100%),
-          url("@/assets/img/service6-2x.jpg");
-        background-size: cover;
-        background-position: center;
-      }
-      &.apparel {
-        background: linear-gradient(to top, #060606c7 5%, transparent 100%),
-          url("@/assets/img/box1-2x.jpg");
-        background-size: cover;
-        background-position: center;
-      }
-      &.team {
-        background: linear-gradient(to top, #060606c7 5%, transparent 100%),
-          url("@/assets/img/box3-2x.jpg");
-        background-size: cover;
-        background-position: center;
-      }
-      .offer-details {
-        position: absolute;
-        bottom: 2rem;
-        left: 2rem;
-        color: $lightestColor;
-        h3 {
-          font-size: 1.25rem;
-          margin: 0.5rem 0;
-        }
-        .text {
-          color: $new;
-        }
       }
     }
   }
@@ -838,21 +759,6 @@ export default {
         color: #b4b4b4;
       }
     }
-    .offers {
-      margin-bottom: -110rem;
-      .card {
-        min-height: 600px;
-        &.workout {
-          background-position: top;
-        }
-        &.apparel {
-          background-position: top;
-        }
-        &.team {
-          background-position: top;
-        }
-      }
-    }
   }
   .quote {
     .wrapper {
@@ -867,23 +773,6 @@ export default {
 }
 
 @media screen and (max-width: 500px) {
-  .jumbotron {
-    .offers {
-      margin-bottom: -57rem;
-      .card {
-        min-height: 300px;
-        &.workout {
-          background-position: top;
-        }
-        &.apparel {
-          background-position: top;
-        }
-        &.team {
-          background-position: top;
-        }
-      }
-    }
-  }
   .quote {
     .wrapper {
       margin-top: 57rem;
