@@ -1,10 +1,6 @@
 <template>
   <main>
-    <div class="bookmark" v-if="scrollpx > 800">
-      <a href="#site-header">
-        <font-awesome-icon icon="fa-solid fa-chevron-up" />
-      </a>
-    </div>
+    <BookMark />
     <section class="jumbotron">
       <div class="container">
         <div class="row py-4">
@@ -304,6 +300,7 @@
 
 <script>
 /* to put in SiteMainComponent */
+import BookMark from "@/components/BookMarkComponent.vue";
 import PlayButton from "@/components/PlayButtonComponent.vue";
 import SeparatorLg from "@/components/SeparatorLgComponent.vue";
 import SeparatorSm from "@/components/SeparatorSmComponent.vue";
@@ -312,6 +309,7 @@ import SeparatorSmPrimary from "@/components/SeparatorSmPrimaryComponent.vue";
 export default {
   name: "SiteMainComponent",
   components: {
+    BookMark,
     PlayButton,
     SeparatorLg,
     SeparatorSm,
@@ -319,7 +317,6 @@ export default {
   },
   data() {
     return {
-      scrollpx: 0,
       offers: [
         {
           title: "Crossfit workout",
@@ -424,35 +421,10 @@ export default {
       ],
     };
   },
-  methods: {
-    handleScroll() {
-      this.scrollpx = window.scrollY;
-    },
-  },
-  created() {
-    window.addEventListener("scroll", this.handleScroll);
-  },
 };
 </script>
 
 <style lang="scss" scoped>
-.bookmark {
-  position: fixed;
-  bottom: 0;
-  right: 4rem;
-  width: 30px;
-  aspect-ratio: 1/1;
-  background-color: #2f2f2f;
-  color: $lightestColor;
-  z-index: 90;
-  a {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
 .jumbotron {
   background: linear-gradient(to right, #060606, #060606 45%, transparent 76%),
     url(@/assets/img/slider82x-scaled.jpg);
