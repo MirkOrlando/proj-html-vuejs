@@ -3,7 +3,7 @@
     <section class="jumbotron">
       <div class="container">
         <div class="row py-4">
-          <div class="col-8">
+          <div class="col-8 col-md">
             <div class="take-control">
               <h5>Certified fitness professional</h5>
               <h1>Take control of your health</h1>
@@ -25,13 +25,17 @@
             </div>
             <!-- /.take-control -->
           </div>
-          <div class="col-4 p-relative">
+          <div class="col-4 p-relative d-md-none">
             <PlayButton />
           </div>
         </div>
         <div class="offers">
-          <div class="row g-2">
-            <div class="col-4" v-for="(offer, index) in offers" :key="index">
+          <div class="row row-sm">
+            <div
+              class="col-4 col-sm-6"
+              v-for="(offer, index) in offers"
+              :key="index"
+            >
               <div class="card" :class="offer.class">
                 <div class="offer-details">
                   <SeparatorSm />
@@ -68,13 +72,13 @@
     <!-- /.quote -->
     <section class="videos">
       <div class="row">
-        <div class="col-6">
+        <div class="col-6 d-md-none">
           <div class="video p-relative">
             <img src="@/assets/img/service15-2x.jpg" alt="" />
             <PlayButton />
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-6 col-md">
           <div class="wrapper">
             <h4>Tune up your workouts</h4>
             <h2>The best health & fitness advice online</h2>
@@ -114,7 +118,7 @@
               <font-awesome-icon icon="fa-solid fa-chevron-right" />
             </div>
           </div>
-          <div class="row g-2">
+          <div class="row">
             <div class="col-4" v-for="(video, index) in videos" :key="index">
               <div class="card">
                 <div class="card-video p-relative">
@@ -135,7 +139,7 @@
     <section class="mailing-list">
       <div class="container">
         <div class="row py-6">
-          <div class="col-7">
+          <div class="col-7 col-md">
             <div class="wrapper">
               <h5>Join our mailing list today</h5>
               <h2>Insider offers & flash sales in your inbox every week.</h2>
@@ -157,8 +161,12 @@
     <!-- /.mailing-list -->
     <section class="plans">
       <div class="container">
-        <div class="row g-3">
-          <div class="col-4" v-for="(plan, index) in plans" :key="index">
+        <div class="row row-md">
+          <div
+            class="col-4 col-md-6"
+            v-for="(plan, index) in plans"
+            :key="index"
+          >
             <div class="card">
               <div class="card-icon">
                 <font-awesome-icon :icon="plan.icon" />
@@ -193,7 +201,7 @@
             </a>
           </div>
         </div>
-        <div class="row g-2">
+        <div class="row">
           <div class="col-4" v-for="(article, index) in articles" :key="index">
             <div class="card">
               <div class="card-image p-relative" :class="article.class">
@@ -237,8 +245,12 @@
     <!-- /.jumbo-quote -->
     <div class="partners">
       <div class="container">
-        <div class="row">
-          <div class="col-3" v-for="(partner, index) in partners" :key="index">
+        <div class="row row-md">
+          <div
+            class="col-3 col-md-6"
+            v-for="(partner, index) in partners"
+            :key="index"
+          >
             <div class="card">
               <div class="card-image">
                 <img :src="partner.src" alt="" />
@@ -435,7 +447,6 @@ export default {
     position: relative;
     height: 100%;
     min-height: 400px;
-    background-size: cover;
     border-radius: 0.25rem;
     border-bottom-right-radius: 2rem;
     margin-bottom: -20rem;
@@ -447,16 +458,19 @@ export default {
       background: linear-gradient(to top, #060606c7 5%, transparent 100%),
         url("@/assets/img/service6-2x.jpg");
       background-size: cover;
+      background-position: center;
     }
     &.apparel {
       background: linear-gradient(to top, #060606c7 5%, transparent 100%),
         url("@/assets/img/box1-2x.jpg");
       background-size: cover;
+      background-position: center;
     }
     &.team {
       background: linear-gradient(to top, #060606c7 5%, transparent 100%),
         url("@/assets/img/box3-2x.jpg");
       background-size: cover;
+      background-position: center;
     }
   }
   .offer-details {
@@ -517,7 +531,7 @@ export default {
     }
   }
   .wrapper {
-    padding: 6rem;
+    padding: 4rem;
     h4 {
       color: $primaryColor;
       margin-bottom: 2.5rem;
@@ -694,19 +708,21 @@ export default {
         min-height: 250px;
         background-image: url("@/assets/img/blog4-2x-800x515.jpg");
         background-size: cover;
+        background-position: center;
         background-repeat: no-repeat;
-        transition: all 250ms linear;
       }
       &.workout {
         min-height: 250px;
         background-image: url("@/assets/img/blog1-2x-800x515.jpg");
         background-size: cover;
+        background-position: center;
         background-repeat: no-repeat;
       }
       &.juices {
         min-height: 250px;
         background-image: url("@/assets/img/blog3-2x-800x515.jpg");
         background-size: cover;
+        background-position: center;
         background-repeat: no-repeat;
       }
     }

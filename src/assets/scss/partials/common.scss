@@ -19,7 +19,8 @@ img {
 }
 
 .btn {
-    @include button
+    @include button;
+    font-size: 0.75rem;
 }
 
 .btn-primary {

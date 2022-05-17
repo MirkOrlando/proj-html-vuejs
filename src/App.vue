@@ -125,6 +125,34 @@ export default {
   }
 }
 
+@media screen and (max-width: 900px) {
+  .d-md-none {
+    display: none;
+  }
+  .row-md {
+    flex-wrap: wrap;
+  }
+  .col-md {
+    flex: 1;
+  }
+
+  .col-md-6 {
+    margin: 1rem;
+    width: calc(100% / 12 * 6 - 2rem);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .row-sm {
+    flex-wrap: wrap;
+  }
+
+  .col-sm-6 {
+    margin: 1rem;
+    width: calc(100% / 12 * 6 - 2rem);
+  }
+}
+
 /* animation show menu */
 @keyframes show {
   0% {
