@@ -853,6 +853,11 @@ export default {
       margin-top: 110rem;
     }
   }
+  .videos {
+    .wrapper {
+      padding: 4rem 1rem;
+    }
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -876,6 +881,53 @@ export default {
   .quote {
     .wrapper {
       margin-top: 57rem;
+    }
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .jumbotron {
+    .take-control {
+      h5 {
+        font-size: 1rem;
+      }
+      h1 {
+        font-size: 3rem;
+      }
+      .btn-actions {
+        padding: unset;
+        .btn:first-child {
+          margin-right: unset;
+        }
+        .btn {
+          display: block;
+          text-align: center;
+          margin: 1rem;
+        }
+      }
+    }
+  }
+  .mailing-list {
+    h5 {
+      font-size: 1rem;
+    }
+    h2 {
+      color: $lightestColor;
+      font-size: 2.5rem;
+      font-weight: 400;
+      margin: 1rem 0;
+    }
+    .action {
+      margin: 0;
+      input,
+      .btn {
+        display: block;
+        width: 100%;
+        margin: 1rem 0;
+      }
+    }
+    .text {
+      color: $jumbo;
     }
   }
 }
