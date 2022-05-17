@@ -1,9 +1,14 @@
 <template>
   <main>
+    <div class="bookmark" v-if="scrollpx > 800">
+      <a href="#site-header">
+        <font-awesome-icon icon="fa-solid fa-chevron-up" />
+      </a>
+    </div>
     <section class="jumbotron">
       <div class="container">
         <div class="row py-4">
-          <div class="col-8 col-md">
+          <div class="col-7 col-md">
             <div class="take-control">
               <h5>Certified fitness professional</h5>
               <h1>Take control of your health</h1>
@@ -25,7 +30,7 @@
             </div>
             <!-- /.take-control -->
           </div>
-          <div class="col-4 p-relative d-md-none">
+          <div class="col-5 p-relative d-md-none">
             <PlayButton />
           </div>
         </div>
@@ -314,6 +319,7 @@ export default {
   },
   data() {
     return {
+      scrollpx: 0,
       offers: [
         {
           title: "Crossfit workout",
@@ -418,15 +424,40 @@ export default {
       ],
     };
   },
+  methods: {
+    handleScroll() {
+      this.scrollpx = window.scrollY;
+    },
+  },
+  created() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
 };
 </script>
 
 <style lang="scss" scoped>
+.bookmark {
+  position: fixed;
+  bottom: 0;
+  right: 4rem;
+  width: 30px;
+  aspect-ratio: 1/1;
+  background-color: #2f2f2f;
+  color: $lightestColor;
+  z-index: 90;
+  a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .jumbotron {
   background: linear-gradient(to right, #060606, #060606 45%, transparent 76%),
     url(@/assets/img/slider82x-scaled.jpg);
   background-size: auto, cover;
-  background-position: top right;
+  background-position: top right 25%;
   background-repeat: no-repeat;
   .take-control {
     h5 {
