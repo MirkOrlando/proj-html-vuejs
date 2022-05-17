@@ -120,7 +120,7 @@
           </div>
           <div class="row row-sm">
             <div
-              class="col-4 col-sm-6"
+              class="col-4 col-sm-6 col-xs"
               v-for="(video, index) in videos"
               :key="index"
             >
@@ -167,7 +167,7 @@
       <div class="container">
         <div class="row row-md">
           <div
-            class="col-4 col-md-6"
+            class="col-4 col-md-6 col-xs"
             v-for="(plan, index) in plans"
             :key="index"
           >
@@ -207,7 +207,7 @@
         </div>
         <div class="row row-sm">
           <div
-            class="col-4 col-sm-6"
+            class="col-4 col-sm-6 col-xs"
             v-for="(article, index) in articles"
             :key="index"
           >
@@ -255,7 +255,7 @@
       <div class="container">
         <div class="row row-md">
           <div
-            class="col-3 col-md-6"
+            class="col-3 col-md-6 col-xs"
             v-for="(partner, index) in partners"
             :key="index"
           >
@@ -756,6 +756,7 @@ export default {
   background: linear-gradient(to top, #000211f0 5%, transparent 100%),
     url("@/assets/img/banner2-2x.jpg");
   background-size: cover;
+  background-position: center;
   color: $lightestColor;
   text-align: center;
   padding: 10rem 0;
@@ -824,6 +825,13 @@ export default {
 
 @media screen and (max-width: 768px) {
   .jumbotron {
+    background-size: auto;
+    background-position: right 35% top;
+    .take-control {
+      .text {
+        color: #b4b4b4;
+      }
+    }
     .offers {
       margin-bottom: -110rem;
       .card {
@@ -843,6 +851,31 @@ export default {
   .quote {
     .wrapper {
       margin-top: 110rem;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .jumbotron {
+    .offers {
+      margin-bottom: -57rem;
+      .card {
+        min-height: 300px;
+        &.workout {
+          background-position: top;
+        }
+        &.apparel {
+          background-position: top;
+        }
+        &.team {
+          background-position: top;
+        }
+      }
+    }
+  }
+  .quote {
+    .wrapper {
+      margin-top: 57rem;
     }
   }
 }

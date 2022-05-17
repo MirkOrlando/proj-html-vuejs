@@ -3,7 +3,7 @@
     <div class="footer-top py-4">
       <div class="container">
         <div class="row row-sm">
-          <div class="col-4 col-sm-6">
+          <div class="col-4 col-sm-6 col-xs">
             <div class="social">
               <div class="logo">
                 <img src="@/assets/img/logo-200x34.png" alt="logo" />
@@ -28,7 +28,7 @@
               </div>
             </div>
           </div>
-          <div class="col-4 col-sm-6">
+          <div class="col-4 col-sm-6 col-xs">
             <div class="recent-posts">
               <h4>Recent Posts</h4>
               <ul>
@@ -41,7 +41,7 @@
               </ul>
             </div>
           </div>
-          <div class="col-4 col-sm-6">
+          <div class="col-4 col-sm-6 col-xs">
             <div class="contacts">
               <h4>Contact Information</h4>
               <p class="address">4746 Tippòe Rpad Michigan 48449</p>
@@ -121,6 +121,7 @@ footer {
   .footer-bottom {
     color: $footerLightDarkColor;
     text-align: center;
+    line-height: 1.5rem;
     .fa-copyright {
       font-size: 0.75rem;
       vertical-align: super;

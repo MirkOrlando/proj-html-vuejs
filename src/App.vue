@@ -157,6 +157,12 @@ export default {
   }
 }
 
+@media screen and (max-width: 500px) {
+  .col-xs {
+    width: 100%;
+  }
+}
+
 /* animation show menu */
 @keyframes show {
   0% {
