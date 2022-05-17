@@ -36,7 +36,8 @@ export default {
           position: absolute;
           left: 0;
           top: 100%;
-          background-color: black;
+          background-color: #0d0d10;
+          color: $lightestColor;
           width: 100%;
           z-index: 100;
           .nav-items {
@@ -44,15 +45,70 @@ export default {
             li {
               display: block;
               padding: 1rem;
-              border-bottom: 1px solid #0d0d10;
+              border-bottom: 1px solid #212121;
+              background-color: transparent;
+              transition: all 250ms linear;
+              &.active {
+                background-color: #1f1f22;
+              }
             }
           }
           .nav-actions {
             display: flex;
             flex-direction: column;
+            align-items: flex-start;
+            z-index: 100;
+            .btn {
+              display: none;
+            }
+            .ex-btn {
+              display: block;
+              padding: 1rem;
+              order: 0;
+              border-bottom: 1px solid #212121;
+              width: 100%;
+              &:hover {
+                background-color: #1f1f22;
+              }
+            }
+            .chart {
+              order: 1;
+              border-bottom: 1px solid #212121;
+              width: 100%;
+              &:hover {
+                background-color: #1f1f22;
+              }
+            }
             a {
               padding: 1rem;
               margin: 0;
+              display: block;
+            }
+            .search {
+              display: flex;
+              padding: 0 1rem;
+              order: 0;
+              border-bottom: 1px solid #212121;
+              width: 100%;
+              input {
+                padding: 0.5rem;
+                margin: 0.5rem 0;
+                display: block;
+                border-top-left-radius: 2rem;
+                border-bottom-left-radius: 2rem;
+                width: 20%;
+                transition: all 1000ms linear;
+                &:focus {
+                  width: 100%;
+                }
+              }
+              a {
+                margin: 0.5rem 0;
+                padding: 0.5rem;
+                background-color: $darkestColor;
+                border-top-right-radius: 2rem;
+                border-bottom-right-radius: 2rem;
+              }
             }
           }
         }

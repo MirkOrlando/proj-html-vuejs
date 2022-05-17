@@ -23,11 +23,13 @@
             <div class="nav-actions">
               <a href="#" class="btn btn-primary">Schedule a Workout</a>
               <div class="ex-btn">Schedule a Workout</div>
-              <a href="#" class="mx-2">
-                <font-awesome-icon icon="fa-solid fa-cart-shopping" />
-              </a>
+              <div class="chart">
+                <a href="#" class="mx-2">
+                  <font-awesome-icon icon="fa-solid fa-cart-shopping" />
+                </a>
+              </div>
               <div class="search">
-                <input type="text" />
+                <input type="text" placeholder="Search" />
                 <a href="#">
                   <font-awesome-icon icon="fa-solid fa-magnifying-glass" />
                 </a>
