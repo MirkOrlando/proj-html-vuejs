@@ -2,18 +2,8 @@
   <main>
     <BookMark />
     <!-- ./BookMark -->
-    <div class="badges">
-      <div class="demo">
-        <div class="icon">
-          <font-awesome-icon icon="fa-regular fa-folder-open" />
-        </div>
-        <div class="text">Demos</div>
-      </div>
-      <div class="price">
-        <div class="number"><span>$</span>39</div>
-        <div class="text">On Sale</div>
-      </div>
-    </div>
+    <Badges />
+    <!-- ./Badges -->
     <section class="jumbotron">
       <div class="container">
         <div class="row py-4">
@@ -182,6 +172,7 @@
 <script>
 /* to put in SiteMainComponent */
 import BookMark from "@/components/BookMarkComponent.vue";
+import Badges from "@/components/BadgesComponent.vue";
 import SeparatorLg from "@/components/SeparatorLgComponent.vue";
 import PlayButton from "@/components/PlayButtonComponent.vue";
 import OfferList from "@/components/OfferListComponent.vue";
@@ -194,6 +185,7 @@ export default {
   name: "SiteMainComponent",
   components: {
     BookMark,
+    Badges,
     PlayButton,
     SeparatorLg,
     OfferList,
@@ -206,47 +198,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.badges {
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  top: 8rem;
-  right: 0.5rem;
-  color: #33475b;
-  z-index: 90;
-  .text {
-    font-size: 0.75rem;
-  }
-  .demo,
-  .price {
-    background-color: $lightestColor;
-    width: fit-content;
-    padding: 0.25rem;
-    margin: 0.25rem;
-    aspect-ratio: 1/1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 0.5rem;
-    border: 1px solid #33475b;
-  }
-  .demo {
-    .icon {
-      font-size: 2rem;
-    }
-  }
-  .price {
-    .number {
-      color: #65bc7b;
-      font-size: 2rem;
-      span {
-        font-size: 1rem;
-        vertical-align: super;
-      }
-    }
-  }
-}
 .jumbotron {
   background: linear-gradient(to right, #060606, #060606 45%, transparent 76%),
     url(@/assets/img/slider82x-scaled.jpg);
@@ -459,12 +410,6 @@ export default {
     font-weight: bold;
     margin: 0.5rem 0;
     color: $new;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .badges {
-    display: none;
   }
 }
 
