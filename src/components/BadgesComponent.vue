@@ -25,7 +25,7 @@ export default {
   flex-direction: column;
   position: fixed;
   top: 8rem;
-  right: 0.5rem;
+  right: 0;
   color: #33475b;
   z-index: 90;
   .text {
@@ -35,7 +35,7 @@ export default {
   .price {
     background-color: $lightestColor;
     width: fit-content;
-    padding: 0.25rem;
+    padding: 0.5rem;
     margin: 0.25rem;
     aspect-ratio: 1/1;
     display: flex;
@@ -47,13 +47,13 @@ export default {
   }
   .demo {
     .icon {
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
   }
   .price {
     .number {
       color: #65bc7b;
-      font-size: 2rem;
+      font-size: 1.5rem;
       span {
         font-size: 1rem;
         vertical-align: super;
