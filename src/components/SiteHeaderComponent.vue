@@ -38,7 +38,7 @@
               <a href="#" class="btn btn-primary">Schedule a Workout</a>
               <div class="ex-btn">Schedule a Workout</div>
               <div class="chart">
-                <a href="#" class="mx-2">
+                <a href="#" class="cart mx-2">
                   <font-awesome-icon icon="fa-solid fa-cart-shopping" />
                 </a>
               </div>

@@ -30,8 +30,8 @@ export default {
   position: fixed;
   bottom: 0;
   right: 4rem;
-  width: 30px;
-  aspect-ratio: 1/1;
+  width: 40px;
+  height: 25px;
   background-color: #2f2f2f;
   color: $lightestColor;
   z-index: 90;
